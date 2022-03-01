@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.3.1)  1 MAR 2022 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.3.1)  2 MAR 2022 00:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/fredericbecerril/projet/Cours/Algèbre linéaire/test.tex"
-(/Users/fredericbecerril/projet/Cours/Algèbre linéaire/test.tex
+**"/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex"
+(/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-21> (/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -131,8 +131,8 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box52
-) (/Users/fredericbecerril/projet/Cours/Algèbre linéaire/test.aux)
-\openout1 = `test.aux'.
+) (/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.aux)
+\openout1 = `cours1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -231,7 +231,7 @@ Package pdftex.def Info: images/image04.png  used on input line 44.
 (pdftex.def)             Requested size: 148.55463pt x 87.32603pt.
  [1
 
-{/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image01.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image03_1.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image03_2.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image04.png>]
+{/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image01.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image03_1.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image03_2.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image04.png>]
 <images/image02.png, id=20, 168.63pt x 136.51pt>
 File: images/image02.png Graphic file (type png)
 <use images/image02.png>
@@ -248,29 +248,29 @@ File: images/image05.png Graphic file (type png)
 <use images/image05.png>
 Package pdftex.def Info: images/image05.png  used on input line 80.
 (pdftex.def)             Requested size: 89.33353pt x 68.25482pt.
- [2 </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image02.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image05.png>]
+ [2 </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image02.png> </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image05.png>]
 <images/image06.png, id=30, 186.6975pt x 84.315pt>
 File: images/image06.png Graphic file (type png)
 <use images/image06.png>
 Package pdftex.def Info: images/image06.png  used on input line 93.
 (pdftex.def)             Requested size: 186.69704pt x 84.31477pt.
- [3 </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image06.png>]
+ [3 </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image06.png>]
 <images/image07.png, id=37, 172.645pt x 117.43875pt>
 File: images/image07.png Graphic file (type png)
 <use images/image07.png>
 Package pdftex.def Info: images/image07.png  used on input line 236.
 (pdftex.def)             Requested size: 172.64456pt x 117.43845pt.
- [4 </Users/fredericbecerril/projet/Cours/Algèbre linéaire/images/image07.png>] [5] [6] (/Users/fredericbecerril/projet/Cours/Algèbre linéaire/test.aux) ) 
+ [4 </Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image07.png>] [5] [6] (/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.aux) ) 
 Here is how much of TeX's memory you used:
  2809 strings out of 478585
- 47418 string characters out of 2830755
- 352849 words of memory out of 3000000
+ 47505 string characters out of 2830755
+ 352853 words of memory out of 3000000
  20970 multiletter control sequences out of 15000+600000
  474664 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,62p,357b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,19n,62p,366b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/test.pdf" (6 pages, 333097 bytes).
+Output written on "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.pdf" (6 pages, 333097 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
