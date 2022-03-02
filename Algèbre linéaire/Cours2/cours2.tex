@@ -1,0 +1,241 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Chapitre 1: Produit scalaire et orthogonalité}
+
+\section{Produit scalaire dans un $\mathbb{R}$ev}
+
+\subsection{Orthogonalité des vecteurs}
+
+Comme dans le plan, dans $(E, <|>)$, deux vecteurs x et y sont \underline{orthogonaux} ssi $<x|y> = 0 \tab[0.5cm] x \perp y$ \\
+On a de nouveau l'égalité de Pythagore: \\
+$x \perp y \Leftrightarrow ||x + y||^2 = ||x||^2 + ||y||^2$
+
+\begin{itemize}
+    \item On dit aussi qu'un vecteur x est \underline{unitaire} si $||x|| = 1$
+    \item A tout vecteur x non nul on peut bien sûr associer un vecteur unitaire et colinéaire à x en posant: $u = \frac{x}{||x||}$
+\end{itemize}
+
+\paragraph{\underline{Définition:}}
+Soit $(E, <|>)$ prehilbertien et pour $p \geq 1$ fixé ${f_1, \dots, f_p} = F$ est une famille de vecteurs de E.
+\begin{itemize}
+    \item La famille F est dite \underline{orthogonale} ssi les vecteurs de la famille sont deux à deux orthogonaux:
+$$
+\forall 1 \leq i, j \leq p \tab i \neq j \tab <f_i | f_j> = 0
+$$
+    \item La famille F est dite \underline{orthonormée} si la famille est orthogonale et que tous les vecteurs sont unitaires:
+$$
+\forall 1 \leq i, j \leq p \tab <f_i | f_j> = 
+\left\{
+    \begin{array}{ll}
+        0 \mbox{ si } i \neq j \\
+        1 \mbox{ si } i = j \\
+    \end{array}
+\right.
+$$
+\end{itemize}
+
+\paragraph{\underline{Remarque:}} \mbox{}\\
+Si $p = 1 \tab F = \{f_1\}$ est orthogonale pour tout $f_1$ de E \\
+\tab[2.1cm] $F = \{f_1\}$ est orthonormé pour tout vecteur $f_1$ de E \\
+
+Il y a un lien entre orthogonalité et liberté.
+
+\paragraph{\underline{Proposition:}} Toute famille orthogonale de vecteurs \underline{non nuls} est \underline{libre}. \\
+\underline{Attention}
+$$
+\mbox{Dans } \mathbb{R}^2 \tab[0.3cm]
+\left\{
+    \begin{array}{ll}
+        \begin{pmatrix}
+            0\\
+            0\\
+        \end{pmatrix},
+        \begin{pmatrix}
+            1\\
+            1\\
+        \end{pmatrix}
+    \end{array}
+\right\} \mbox{ est orthogonale mais pas libre}
+$$
+
+\paragraph{\underline{Preuve:}} Soit $\{f_1, \dots, f_p\}$ une telle famille, on suppose qu'il existe $(\alpha_1, \dots, \alpha_p) \in \mathbb{R}^p$ tel que:
+$$
+\alpha_1 f_1 + \dots \alpha_p f_p = 0 = \sum_{i = 1}^p \alpha_i f_1
+$$
+
+D'après les Proprietés du produit scalaire, \underline{pour tout} $1 \leq j \leq p$
+$$
+<0 | f_j> = 0 = <\alpha_1 f_1 + \dots + \alpha_p f_p | f_j>
+$$
+\tab[6.5cm]= $<\sum_{i = 1}^p \alpha_i f_i | f_j>$ \\
+\tab[6.5cm]= $\sum_{i = 1}^p \alpha_i <f_i | f_j> = \alpha_j = 0$ \\
+On vient de montrer que: \\
+Si $\alpha_1 f_1 + \dots + \alpha_p f_p = 0$ alors $\alpha_1 = \alpha_2 = \dots = \alpha_p = 0$
+C'est la définition d'un famille libre.
+
+\paragraph{\underline{Corollaire:}}
+\begin{itemize}
+    \item Toute famille orthonormé est libre
+    \item De toute famille orthogonale de vecteurs non nuls on déduit une famille orthonormé de même taille en normant:
+$$
+\{f_1, \dots, f_p\} \rightarrow \{\frac{f_1}{||f_1||}, \dots, \frac{f_p}{||f_p||}\}
+$$
+    \item Sous les mêmes hypothèses sur F $Vect\{f_1, \dots, f_p\}$ est de dimension p.
+\end{itemize}
+
+Dans un espace euclidien $(E, <|>)$, a-t-on des bases orthonormées ou orthogonales, i.e. si dans $E = n$\\
+A-t-on des familles orthonormées de taille n ? \\
+A-t-on des familles orthogonales de vecteurs non nuls de taille n ?.
+
+\paragraph{\underline{Théorème:}} Si $(E, <|>)$ est euclidien (dimension finie) E admet des bases orthogonales, et donc des bases orthonormées (BON)
+
+\newpage
+
+\paragraph{\underline{Preuve:}} On va se concentrer sur l'existence de bases orthogonales, le reste s'en déduisant. \\
+Trouver une base orthogonale revient à trouver une famille orthogonale de n vecteurs non nuls, ce qu'on va faire par récurrence sur n \\
+Montrons que le résultat est vrai pour tout espace de dimension n par récurrence $(H_n)$
+\begin{itemize}
+    \item si $n = 1$, on prend un élément non nul de E $f_1$ et $\{f_1\}$ base orthogonale.
+    \item Supposons que la Proprieté soit vrai dans tout espace de dim n et on se donne un espace euclidien E de dimension $n + 1$ de produit scalaire $<|>_E$
+    \begin{itemize}
+        \item[] Soit e une élément non nul de E fixé
+        \item[] L'application: $\varphi_e: E \rightarrow \mathbb{R}$
+        \item[] $\tab[3cm] x \rightarrow <x|e>_E$ \tab[0.2cm] est bilinéaire.
+        \item[] et si $\lambda \in \mathbb{R}, \tab[0.5cm] \varphi_e(\frac{\lambda}{||e||^2}e) = \lambda \tab[0.5cm] \mbox{ donc } Im \varphi_e = \mathbb{R}$
+        \item[] donc $F = \mbox{Ker }\varphi_e = \{x \in E \mbox{ tq } <x | e>_E = 0\}$ est un sous-espace vectoriel de dimension n
+        \item[] Mais l'application $F \times F \rightarrow R$
+        \item[] $\tab[3cm] (x, y) \rightarrow <x|y>_E$ est un produit scalaire sur F
+        \item[] Par hypothèses il existe une base orthogonale de F $\{f_1, \dots, f_n\}$
+        \item[] $(<f_i|f_j>_E = 0 \mbox{ si } i \neq j)$
+        \item[] Mais $e \neq 0$ et $<f_i | e>_E = 0$ 
+        \item[] $\{f_1, \dots, f_n, e\}$ est donc une famille orthogonale de E, de n+1 éléments non nuls, donc une base de E 
+    \end{itemize}
+    \item On a $H_1$ vrai \tab donc $\forall n \geq 1 \; H_n$ vrai \tab $\forall n \in \mathbb{N}^* \; H_n \Rightarrow H_{n+1}$
+\end{itemize}
+
+\paragraph{\underline{Corollaire:}} Dans un espace prehilbertien $(E, <|>)$ tout sous espace vectoriel de dimension finie admet une base orthogonale (et un BON)
+
+On va finir ce chapitre en examinant comment un produit scalaire s'exprime dans une base. (Un peu comme le lien entre application linéaire et matrice)
+
+\newpage
+
+\subsection{Espaces euclidien et bases}
+
+\paragraph{\underline{Rappel:}} Si B = $\{e_1, \dots, e_n\}$ est une base de E (dim $E = n$) alors, on a un isomorphisme entre E et $\mathbb{R}^n$ en utilisant les coordonnées
+\begin{itemize}
+    \item[] $\varphi_B : E \rightarrow \mathbb{R}^n$
+    \item[] $x = x_1 e_1 + \dots + x_n + e_n \rightarrow
+    \begin{pmatrix}
+        x_1 \\
+        \vdots \\
+        x_n \\
+    \end{pmatrix}$
+    \item[] $\varphi_B^{-1} : \mathbb{R}^n \rightarrow E$
+    \item[] $X = 
+    \begin{pmatrix}
+        x_1 \\
+        \vdots \\
+        x_n \\
+    \end{pmatrix} \rightarrow x_1 e_1 + \dots + x_n e_n$
+\end{itemize}
+
+Si E est euclidien $(<|>)$ alors si $\varphi_B(x) = X =
+\begin{pmatrix}
+    x_1 \\
+    \vdots \\
+    x_n \\
+\end{pmatrix}, \tab \varphi_B(y) = Y = 
+\begin{pmatrix}
+    y_1 \\
+    \vdots \\
+    y_n \\
+\end{pmatrix}$ \\
+$et <x | y> \;=\; <\sum_{i = 1}^n x_i e_i | \sum_{j = 1}^n y_j e_j > \;=\; \sum_{i = 1}^n\sum_{j = 1}^n x_i y_j <e_i | e_j>$
+
+\paragraph{\underline{Proposition:}}
+\begin{itemize}
+    \item Soit B une base de E et A la matrice $M_n(\mathbb{R})$ telle que $A_{i,j} = <e_i | e_j>$
+    \item Si x a pour coordonnées X dans B et y a pour coordonnées Y dans B $<x|y> = X^T . A . Y$
+    \item Par ailleurs $(X, Y) \rightarrow X^T . A . Y$ défini un produit scalaire sur $\mathbb{R}^n \; <|>_A$ \\
+tel que $<x|y> = <\varphi_B(x)|\varphi_B(y)>_A$
+\end{itemize}
+
+\paragraph{\underline{Remarque:}} $A_{i, j} = A_{j, i}$ soit encore $A^T = A$ (A symétrique)
+
+La preuve est évidente en développant $X^T . A . Y$ et c'est un produit scalaire grâce à l'isomorphisme
+$$<X|Y>_A = <\varphi_B^{-1}(x) | \varphi_B^{-1}(Y)>_E$$
+
+\begin{itemize}
+    \item Que se passe-t-il si B est orthonormée ?
+    \begin{itemize}
+        \item[] Si B est orthonormée, pour tous $x, y \in E$ et \\
+    $X = \varphi_B(x) \tab[0.5cm] Y = \varphi_B(y) \mbox{ dans } \mathbb{R}^n$\\
+    $A = I_n \mbox{ donc } <x|y> = X^T . Y = x_1 y_1 + \dots + x_n y_n$
+        \item[] Comme tout espace E euclidien de dimension n admet des bases orthonormées, $(E, <|>)$ est isomorphe à $\mathbb{R}^n$ muni du produit scalaire usuel. Toutes les Proprietés des espaces euclidiens peuvent se ramener aux Proprietés de $(\mathbb{R}^n, \cdot)$
+    \end{itemize}
+    \item On finit avec 3 remarques
+    \begin{itemize}
+        \item Sauf contre indication, quand on parle de $\mathbb{R}^n$ muni du produit scalaire usuel
+        \item Dans $\mathbb{R}^n$, la base canonique $
+        \left\{
+            \begin{array}{ll}
+                \begin{pmatrix}
+                    1\\
+                    0\\
+                    \vdots \\
+                    0 \\
+                \end{pmatrix},
+                \begin{pmatrix}
+                    0\\
+                    1\\
+                    \vdots \\
+                    0 \\
+                \end{pmatrix}, \dots,
+                \begin{pmatrix}
+                    0 \\
+                    0 \\
+                    \vdots \\
+                    1 \\
+                \end{pmatrix}
+            \end{array}
+        \right\}
+$ est orthonormée mais ce n'est pas la seul. \\
+    Dans $\mathbb{R}^n \; \forall \theta \in \mathbb{R},
+    \left\{
+        \begin{array}{ll}
+            \left(
+                \begin{array}{ll}
+                    cos(\theta) \\
+                    sin(\theta) \\
+                \end{array}
+            \right)
+            \left(
+                \begin{array}{ll}
+                    -sin(\theta) \\
+                    cos(\theta) \\
+                \end{array}
+            \right)
+        \end{array}
+    \right\}$ est une BON
+    \end{itemize}
+    \item On y reviendra plus tard mais si B et B' sont deux bases de $(E, <|>)$ euclidien. et P la matrice de passage de B à B'
+    Si (X, Y), (X', Y') sont les coordonnées de x, y respectivement dans B et B'. on a \\
+    $<x | y> = X^T . A . Y = X'^T . A' . Y'$ et comme $X' = PX, \; Y' = PY$ \\
+    $X'^T . A' . Y' = (PX)^T . A' . (PY) = X^T . P^T . A' . P . Y$ \\
+    d'où $A' = P^T . A . P$
+\end{itemize}
+
+
+\end{document}
