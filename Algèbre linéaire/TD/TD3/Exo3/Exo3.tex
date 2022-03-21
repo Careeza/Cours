@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{mathabx}
+\usepackage{stmaryrd}
+
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\def\env@matrix{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+
+\begin{document}
+
+\part*{Exerice 3}
+
+$\bullet$ Soit $X, Y \in \mathbb{R}^n$ et $P \in O_3(\mathbb{R})$\\
+$<PX | PY> = (PX)^T \cdot PY = X^T P^T \cdot P Y$\\
+Or comme $P \in O_3(\mathbb{R})$ $P^T \cdot P = I_3$\\
+Donc $<PX | PY> = X^T Y = <X|Y>$\\
+Comme $<PX | PY> = <X|Y>$\\
+on a $||PX|| = \sqrt{<PX|PX>} = \sqrt{<X|X>} = ||X||$\\
+Si P admet une valeur propre $\lambda \in \mathbb{R}$\\
+Soit U le vecteur propre associé a cette valeur propre\\
+On a d'une part $||PU|| = ||\lambda U|| = |\lambda| \times ||U||$ car U vecteur propre\\
+D'autre part on a $||PU|| = ||U||$ car P est une isométrie\\
+Donc $||U|| = |\lambda| \times ||U|| \Leftrightarrow \lambda \pm 1$\\
+$\bullet$ Soit $Z \in \mathbb{C}^n$ un vecteur propre associé a la valeur propre $\lambda \in \mathbb{C}$\\
+$Z = \begin{pmatrix}
+    z_1\\
+    \vdots\\
+    z_n\\
+\end{pmatrix} = \begin{pmatrix}
+    a_1 + i b_1\\
+    \vdots\\
+    a_n + i b_n\\
+\end{pmatrix}$ \\
+$\overline{Z} = \begin{pmatrix}
+    \overline{z_1}\\
+    \vdots\\
+    \overline{z_n}\\
+\end{pmatrix} = \begin{pmatrix}
+    a_1 - i b_1\\
+    \vdots\\
+    a_n - i b_n\\
+\end{pmatrix}$ \\
+
+\newpage
+
+\noindent \begin{enumerate}[label=\Alph*)]
+    \item $\overline{Z}^T \circ Z = \sum_{i=1}^n z_i \times \overline{z_i} = \sum_{i=1}^n (a_i)^2 + (b_i)^2$ 
+    \item $(P\overline{Z})^T \circ (PZ) = \overline{Z}^TP^T \circ PZ? = \overline{Z}^T Z$
+    \item Soit $f: \mathbb{C}^n \rightarrow \mathbb{R}\\
+    \tab Z \longmapsto \overline{Z}^T \circ Z$\\
+    Soit $Z \in \mathbb{C}^n$ et $\lambda \in \mathbb{C}$, montrons que $f(\lambda Z) = |\lambda|^2f(Z)$\\
+    $f(\lambda Z) = \overline{\lambda Z}^T \circ \lambda Z = (\overline{\lambda} \times \overline{Z})^T \circ (\lambda \times) Z$\\
+    $\tab = \overline{\lambda} \times \lambda \times (\overline{Z}^T Z) = |\lambda|^2 f(Z)$\\
+    On calcule de deux manière différente $f(PZ)$:
+    \begin{itemize}
+        \item $f(PZ) = f(Z)$ vu a la question 2
+        \item $f(PZ) = f(\lambda Z) = |\lambda|^2 f(Z)$
+    \end{itemize}
+    Donc $|\lambda|^2 f(Z) = 1 * f(Z) \Leftrightarrow |\lambda|^2 = 1$\\
+    Or le module d'un nombre complexe est toujours positif\\
+    Donc on a $|\lambda| = 1$
+\end{enumerate}
+
+% \newpage
+% \noindent Soit $f: \mathbb{C}^n \rightarrow \mathbb{R}$\\
+% $\tab[1.5cm] Z \longmapsto \sqrt{\overline{Z}^T \circ Z}$\\
+% Montrons que f est une norme de $\mathbb{C}^n$\\
+% \begin{itemize}
+%     \item Soit $\alpha \in \mathbb{R} \mbox{ et } Z \in \mathbb{C}^n$\\
+%     $f(\alpha Z) = \sqrt{\overline{\alpha Z}^T \circ \alpha Z} = \sqrt{\sum_{i=1}^n (\alpha a_i)^2 + (\alpha b_i)^2} = \sqrt{\sum_{i=1}^n \alpha^2 ((a_i)^2 + (b_i)^2)}$\\
+%     $\tab = \sqrt{\alpha^2 \sum_{i=1}^n (a_i)^2 + (b_i)^2} = |a| f(Z)$
+%     \item Soit $Z \in \mathbb{C}^n$\\
+%     $f(Z) = \sqrt{\sum_{i=1}^n (a_i)^2 + (b_i)^2} \geq 0$\\
+%     Si $f(Z) = 0 \Leftrightarrow \sqrt{\sum_{i=1}^n (a_i)^2 + (b_i)^2} = 0 \Leftrightarrow \sum_{i=1}^n (a_i)^2 + (b_i)^2 = 0\\
+%     \Leftrightarrow \forall i \in \llbracket1, n\rrbracket,\; a_i = b_i = 0$
+%     \item Soit $Z, Z' \in \mathbb{C}^n$\\
+%     $f(Z + Z') = \sqrt{\sum_{i=1}^n (a_i + a'_i)^2 + (b_i + b'_i)^2}\\
+%     \tab[1.5cm] = \sqrt{\sum_{i=1}^n (a_i)^2 + 2 a_i a'_i + (a'_i)^2 + (b_i)^2 + 2 b_i b'_i + (b'_i)^2}\\
+%     \tab[1.5cm] = \sqrt{\sum_{i=1}^n (a_i)^2 + (b_i)^2 + \sum_{i=1}^n (a'_i)^2 + (b'_i)^2 + \sum_{i=1}^n 2(a_i a'_i + b_i b'_i)}$
+% \end{itemize}
+
+\end{document}

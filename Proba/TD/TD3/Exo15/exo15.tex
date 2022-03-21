@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 15}
+
+accident taxi renverse piéton\\
+taxi peut être rouge ou jaune\\
+n = le nombre de taxi rouge\\
+le témoin Elodie peut dire la vérité (V) ou se tromper (F)\\
+$\mathcal{P}(V) = \frac{4}{5}$\\ 
+$\mathcal{P}(F) = \frac{1}{5}$\\
+1) Traduire l'énoncé de façon probabiliste\\
+2) Proba que le Elodie ait vu un taxi rouge\\
+3) Le Elodie a vu un taxi rouge, quelle est la proba que le taxis impliqué soit rouge\\
+\\ \\
+1)$P(J) = \frac{5n}{5n + n} = \frac{5}{6}$\\
+$P(R) = \frac{n}{5n + n} = \frac{1}{6}$\\
+On a aussi $\mathcal{P}(V) = \frac{4}{5}$\\ 
+$\mathcal{P}(F) = \frac{1}{5}$\\
+Et on suppose R/J indépendant de V/F\\
+2) P(Elodie ait vu un taxi R) = $P(R \cap V) + P(J \cap F)$\\
+$\tab[4.8cm] = \frac{1}{6} * \frac{4}{5} + \frac{5}{6} * \frac{1}{5} = \frac{9}{30} = \frac{3}{10}$\\
+3)$P(R|\mbox{Elodie a vu } R) = \frac{P(R \cap \mbox{Elodie a vu } R)}{P(\mbox{Elodie a vu } R)}$\\
+$\tab[3.5cm] = \frac{P(R \cap V)}{P(R \cap V) + P(J \cap F)}$\\
+$\tab[3.5cm] = \frac{\frac{4}{30}}{\frac{9}{30}} = \frac{4}{9}$\\
+\newpage
+\noindent Second témoin Nicolas\\
+On introduit les événements complémentaires $V_2, F_2$\\
+$V_2$ = Nicolas dis vrai, et $P(V_2) = \frac{4}{5}$\\
+$F_2$ = Nicolas dis Faux, et $P(F_2) = \frac{1}{5}$\\
+On suppose les événements $V/F$ indépendant de $V_2/F_2$\\
+4) \{Élodie a vu R\} et \{Nicolas a vu R\} sont ils indépendants ?\\
+5) P(Nicolas a vu R $|$ Elodie a vu R) = ?\\
+6) P(R $|$ Nicolas a vu R $\cap$ Elodie a vu R) = ?\\
+\\ \\
+4) P(Élodie a vu R) = P(Nicolas a vu R) = $\frac{3}{10}$\\
+P(Élodie a vu R $\cap$ Nicolas a vu R) = $P(R \cap V \cap V_2) + P(J \cap F \cap F_2)$\\
+$= P(R) P(V) P(V_2) + P(J) P(F) P(F_2)$ = $\frac{1}{6}*(\frac{4}{5})^2 + \frac{5}{6} * (\frac{1}{5})^2 = \frac{21}{150} = \frac{7}{50}$\\
+Donc $P(\mbox{Elodie a vu R}) * P(\mbox{Nicolas a vu R}) = (\frac{3}{10})^2 = \frac{9}{100} \neq \frac{7}{50}$\\
+5) P(Nicolas a vu R $|$ Elodie a vu R) = $\frac{\mbox{P(Élodie a vu R $\cap$ Nicolas a vu R)}}{P(\mbox{Elodie a vu R})} = \frac{\frac{7}{50}}{\frac{3}{10}} = \frac{7}{15}$\\
+6)P(R $|$ Nicolas a vu R $\cap$ Elodie a vu R) = $\frac{P(R \cap \mbox{Nicolas a vu R $\cap$ Elodie a vu R})}{P(\mbox{Nicolas a vu R $\cap$ Elodie a vu R})}$\\
+$= \frac{P(R \cap V \cap V_2)}{\frac{7}{50}} = \frac{\frac{1}{6} * \frac{16}{25}}{\frac{7}{50}} = \frac{16}{150} * \frac{50}{7} = \frac{16}{21} \approx 0.76$
+\end{document}

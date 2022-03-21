@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\part*{Exercice 1}
+
+Soit E, F et G trois sous-ensembles d'un ensemble $\Omega$. Représenter sur un dessin puis démontrer :
+\begin{enumerate}
+    \item $E \cap F \subset E \subset E \cup F$\\
+soit $x \in E \cap F$ alors $x \in E$ et $x \in F$\\
+Donc on a bien $E \cap F \subset E$\\
+Soit $x \in E$ alors $x \in E \cup F$\\
+Donc on a bien $E \subset E \cup F$
+    \item $E \subset F$ alors $F^c \subset E^c$\\
+Si $x \notin F$ alors $x \notin E$ car autrement E ne serait pas une partie F\\
+Donc on a bien $F^c \subset E^c$
+    \item $F \backslash E = F \cap E^c$\\
+Si $x \in F \backslash E$, alors $x \in F$ et $x \notin E$\\
+Donc on a bien $F \backslash E \subset F \cap E^c$\\
+Si $x \in F \cap E^c$, alors $x \in F$ et $x \notin E$\\
+Donc on a bien $F \cap E^c \subset F \backslash E$\\
+Au final on a bien $F \backslash E = F \cap E^c$
+    \item $F = (F \cap E) \cup (F \cap E^c)$\\
+Soit $x \in F$, on a que soit $x \in E$ soit $x \in E^c$\\
+Donc si $x \in E$, $x \in (F \cap E)$ et $x \in (F \cap E) \cup (F \cap E^c)$\\
+Si $x \in E^c$, $x \in (F \cap E^c)$ et $x \in (F \cap E) \cup (F \cap E^c)$\\
+Donc $F \subset (F \cap E) \cup (F \cap E^c)$\\
+Soit $x \in (F \cap E) \cup (F \cap E^c)$\\
+$x \in (F \cap E)$ ou $x \in (F \cap E^c)$\\
+Si $x \in (F \cap E)$ alors $x \in F$ et $x \in E$ donc $x \in F$\\
+Si $x \in (F \cap E^c)$ alors $x \in F$ et $x \in E^c$ donc $x \in F$\\
+Donc $(F \cap E) \cup (F \cap E^c) \subset F$\\
+Donc on a bien $F = (F \cap E) \cup (F \cap E^c)$
+    \item TODO
+    \item TODO
+\end{enumerate}
+Soit A et B deux sous-ensemble de $\Omega$\\
+Soit $x \in \Omega$\\
+Si on a $1_B(x) = 0$ alors $1_A(x) \leq 0 \Rightarrow 1_A(x) = 0$\\
+Donc si $x \notin B$ alors $x \notin A$\\
+$\Rightarrow B^c \subset A^c$ or on a vu a l'exercice 1.2 que $B^c \subset A^c$ alors $A^{c^c} \subset B^{c^c} \Rightarrow A \subset B$ 
+
+\end{document}

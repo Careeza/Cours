@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 4}
+
+$\bullet$ Soit $(E, <.|.>)$ un espace euclidien et $(x, y) \in E^2$\\
+\begin{center}
+    \begin{minipage}{0.75\textwidth}    
+        \begin{itemize}
+            \item[$<x + y | x + y>$] $= <x | x + y> + <y | x + y>$ (*)
+            \item[] $=<x | x> + <x | y> + <y | x> + <y | y>$ (*)
+            \item[] $=<x | x> + <x | y> + <x | y> + <y | y>$ (**) 
+            \item[] $||x||^2 + ||y||^2 + 2 <x|y>$
+        \end{itemize}
+    \end{minipage}
+\end{center}
+(*) Bilinéarité du produit sclaire
+(**) Symétrie du produit sclaire
+
+\begin{center}
+    \begin{minipage}{0.75\textwidth}    
+        \begin{itemize}
+            \item[$<x - y | x - y>$] $= <x | x - y> - <y | x - y>$
+            \item[] $=<x | x> - <x | y> - (<y | x> - <y | y>)$
+            \item[] $=<x | x> - <x | y> - <x | y> + <y | y>$ 
+            \item[] $||x||^2 + ||y||^2 - 2 <x|y>$
+        \end{itemize}
+    \end{minipage}
+\end{center}
+
+\begin{center}
+    \begin{minipage}{0.75\textwidth}    
+        \begin{itemize}
+            \item[$<x + y | x - y>$] $= <x | x - y> + <y | x - y>$
+            \item[] $=<x | x> - <x | y> + <y | x> - <y | y>$
+            \item[] $=<x | x> - <x | y> + <x | y> - <y | y>$
+            \item[] $||x||^2 - ||y||^2$
+        \end{itemize}
+    \end{minipage}
+\end{center}
+$\bullet$ Soit $(x, y) \in E^2$
+\begin{center}
+    \begin{minipage}{0.75\textwidth}    
+        \begin{itemize}
+            \item[$||x + y||^2 + ||x - y||^2$] $= <x + y | x + y> +<x - y | x - y>$
+            \item[] $= ||x||^2 + ||y||^2 + 2 <x|y> + ||x||^2 + ||y||^2 - 2 <x|y>$
+            \item[] $= 2 * (||x||^2 + ||y||^2)$ 
+        \end{itemize}
+    \end{minipage}
+\end{center}
+$\bullet$ Soit $(x, y) \in E^2$
+\begin{center}
+    \begin{minipage}{0.75\textwidth}    
+        \begin{itemize}
+            \item[$2 + ||x + y||^2$] $= 2 + <x + y | x + y>$
+            \item[] $=2 + ||x||^2 + ||y||^2 + 2 <x|y>$
+            \item[] $\leq 2 + ||x||^2 + ||y||^2 + 2<x|y>$
+            \item[] $= 2 * (1 + ||x||^2 + ||y||^2 + <x|y>)$
+            \item[] $\leq 2 * (1 + ||x||^2 + ||y||^2 + ||x||^2||y||^2)$
+            \item[] $=2 * (1 + ||x||^2) * (1 + ||y||^2)$  
+        \end{itemize}
+    \end{minipage}
+\end{center}
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 3}
+
+$u = \begin{pmatrix}
+    2\\
+    -5\\
+    -1\\
+\end{pmatrix}$ et $v = \begin{pmatrix}
+    -7\\
+    -4\\
+    6\\
+\end{pmatrix}$\\
+$||u||^2 = <u|u> = 2 * 2 + (-5) * (-5) + (-1) * (-1) = 30$\\
+$||v||^2 = <v|v> = (-7) * (-7) + (-4) * (-4) + 6 * 6 = 101$\\
+$||u + v|| = <u + v| u + v> = \left<
+    \begin{pmatrix}
+        2 - 7\\
+        -5 - 4\\
+        -1 + 6\\
+    \end{pmatrix} | \begin{pmatrix}
+        2 - 7\\
+        -5 - 4\\
+        -1 + 6\\
+    \end{pmatrix}
+\right> =  \left<
+    \begin{pmatrix}
+        -5\\
+        -9\\
+        5\\
+    \end{pmatrix} | \begin{pmatrix}
+        -5\\
+        -9\\
+        5\\
+    \end{pmatrix}
+\right>$\\
+$\tab[4cm] = (-5) * (-5) + (-9) * (-9) + 5 * 5 = 131$\\
+$<u|v> = \left<
+    \begin{pmatrix}
+        2\\
+        -5\\
+        -1\\
+    \end{pmatrix} | \begin{pmatrix}
+        -7\\
+        -4\\
+        6\\
+    \end{pmatrix}
+\right> = 2 * (-7) + (-5) * (-4) + (-1) * 6 = 0$\\
+Est-ce logique ? Oui c'est logique car $||u + v|| = ||u + v||$ ssi u et v sont orthogonaux\\
+Donc on sait que u et v sont libre donc dim $Vect \{u, v\} = 2$
+
+\end{document}

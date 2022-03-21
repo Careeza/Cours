@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 3}
+
+Soit $R_1$ le rayon de convergence de $\sum a_n x_n$\\
+$x^n a_n$ est borné si $x \in ]-R_1, R_1[$ et n'est pas borné si $x \in \mathbb{R} \backslash [-R_1, R_1]$\\
+Soit $x \in \mathbb{R}_+$ et $x' = x^2$\\
+Si $x' < \sqrt{R_1} \Rightarrow x < R_1$\\
+Donc $(x')^n a_n$ est borné\\
+Si $x' > \sqrt{R_1} \Rightarrow x > R_1$, donc $x \in \mathbb{R} \backslash [-R_1, R_1]$\\
+Donc $(x')^n a_n$ n'est pas borné\\
+Alors $sup \{x'\in \mathbb{R}_+ \;|\; a_n x'_n \mbox{ borné }\} = sup \{x\in \mathbb{R}_+ \;|\; a_n (x^2)^n \mbox{ borné }\} = \sqrt{R_1} = R_2$\\
+\end{document}

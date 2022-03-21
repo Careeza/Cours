@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.3.1)  2 MAR 2022 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.3.14)  18 MAR 2022 00:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex"
-(/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex
+**"/Users/fredericbecerril/projet/Cours/Alg^^c3^^a8bre lin^^c3^^a9aire/Cours1/cours1.tex"
+(/Users/fredericbecerril/projet/Cours/Alg^^c3^^a8bre lin^^c3^^a9aire/Cours1/cours1.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-21> (/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+L3 programming layer <2022-02-24> (/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
 File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -131,7 +131,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box52
-) (/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.aux)
+) (/Users/fredericbecerril/projet/Cours/Alg^^c3^^a8bre lin^^c3^^a9aire/Cours1/cours1.aux)
 \openout1 = `cours1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -265,17 +265,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--360
 
  []
 
-[6] (/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.aux) ) 
+[6] (/Users/fredericbecerril/projet/Cours/Alg^^c3^^a8bre lin^^c3^^a9aire/Cours1/cours1.aux) ) 
 Here is how much of TeX's memory you used:
- 2809 strings out of 478585
- 47505 string characters out of 2830755
- 352853 words of memory out of 3000000
- 20970 multiletter control sequences out of 15000+600000
+ 2809 strings out of 478583
+ 47505 string characters out of 2830697
+ 352887 words of memory out of 3000000
+ 20972 multiletter control sequences out of 15000+600000
  474664 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,62p,366b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,19n,62p,396b,218s stack positions out of 10000i,1000n,20000p,200000b,80000s
  </Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.pdf" (6 pages, 332838 bytes).
+Output written on "/Users/fredericbecerril/projet/Cours/Alg^^c3^^a8bre lin^^c3^^a9aire/Cours1/cours1.pdf" (6 pages, 332838 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

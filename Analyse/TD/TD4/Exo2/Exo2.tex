@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 2}
+
+$(a_n)_{n \in \mathbb{N}} \mylim{n}{\infty} = 0$\\
+$\sum_{n \in \mathbb{N}} a_n$ diverge\\
+Soit la série entière $\sum a_n x_n$\\
+R = $sup \{x\in \mathbb{R}_+ \;|\; a_n x_n \mbox{ borné }\}$\\
+Si $x = 1$ on $a_n x^n = a_n \mylim{n}{\infty} 0$ et donc $a_n x_n$ est borné\\
+Si $x < 1$ donc $x^n \mylim{n}{\infty} 0$ et $a_n x^n \mylim{n}{\infty} 0$ donc borné\\
+Si $x > 1$ on a $x^n \mylim{n}{\infty} \infty$ mais $a_n x_n \mylim{n}{\infty}$ est indeterminé\\
+Mais on sait que $R \geq 1$\\
+On sait aussi que R = $sup \{x\in \mathbb{R}_+ \;|\; \sum |a_n| x_n \mbox{ converge }\}$\\
+Comme $\sum a_n$ diverge, $\sum |a_n|$ diverge aussi\\
+or $\sum |a_n| \leq \sum |a_n| x_n$ quand $x > 1$\\
+or comme $\sum |a_n|$ diverge $\sum |a_n| x_n$ diverge aussi quand $x > 1$\\
+Donc on sait que $R \leq 1$\\
+Finalement on obtient $R = 1$
+
+\end{document}

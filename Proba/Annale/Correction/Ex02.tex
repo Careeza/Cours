@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exercice 2}
+
+1) Il y a $\begin{pmatrix}
+    3\\
+    14\\
+\end{pmatrix}$ façon de choisir 3 chapitres\\
+2) Il y a $\begin{pmatrix}
+    k - 1\\
+    2\\
+\end{pmatrix}$ façon de choisir les 2 plus petit chapitres\\
+3) $\begin{pmatrix}
+    14\\
+    3\\
+\end{pmatrix} = Card(\{(i_j)_{1 \leq j \leq 3} 1 \leq i_1 < i_2 < i_3 \leq 14\})$\\
+$\tab[1.5cm] = Card(\cup_{k = 3}^{14} (\{(i_j)_{1 \leq j \leq 3} 1 \leq i_1 < i_2 < i_3 = k\}))$\\
+$\tab[1.5cm] = \sum_{k = 3}^{14} Card(\{(i_j)_{1 \leq j \leq 2}, 1 \leq i_1 \leq i_2 \leq k - 1\})$\\
+$\tab[1.5cm] = \sum_{k = 3}^{14} \begin{pmatrix}
+    k - 1\\
+    2
+\end{pmatrix}$\\
+4) $\varphi : \left\{
+    \begin{array}{ll}
+        \{(i_j), 1 \leq i_1 < \dots < i_{k+1} \leq n + 1\} \rightarrow \cap_{p=k}^n \{(i_j), 1 \leq i_1 < \dots < i_k \leq p\} \times \{i_{k + 1} = p + 1\} (E \rightarrow F)\\
+        (i_1, \dots, i_{k+1}) \longmapsto ((i_1, \dots, i_k), i_{k+1})
+    \end{array}
+\right.$
+$\varphi$ est bien définie ?\\
+Oui car $i_{k+1} \in \{k + 1, \dots, n+1\}$ et si $i_{k + 1} = p + 1, (i_1, \dots, i_k) \in \{(i_j), 1 \leq i_1 < \dots < i_k \leq p\}$
+$\varphi$ est injective ? Oui.\\
+$\varphi$ est surjective ?\\
+Soit $((i_1, \dots, i_k), i_{k+1}) \in F$\\
+alors $1 \leq i_1 < i_2 < \dots < i_k \leq i_{k + 1} - 1 < i_{k + 1} \leq n$\\
+Donc $(i_1, \dots, i_{k+1}) \in E$\\
+Et $\varphi((i_1, \dots, i_{k+1})) = ((i_1, \dots, i_k), i_{k+1})$\\
+Donc $\varphi$ est surjective\\
+Donc $\varphi$ est bijective\\
+Finalement on a $\begin{pmatrix}
+    n + 1\\
+    k + 1\\
+\end{pmatrix} = Card(E)$\\
+$\tab[4.1cm] = Card(F)$\\
+$\tab[4.1cm] = \sum_{p = k}^n \begin{pmatrix}
+    p\\
+    k\\
+\end{pmatrix}$
+
+
+\end{document}

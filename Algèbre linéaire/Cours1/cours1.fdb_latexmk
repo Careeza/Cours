@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1646215036 "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex" "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.pdf" "cours1" 1646215036
-  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1646166361 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1647559003 "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex" "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.pdf" "cours1" 1647559004
+  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1647390509 81086 6fddea6b023469843de28035c851ec71 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1646148019 11548 80c1ff8ab796ef73793732f9a4726740 ""
-  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1646148017 10260282 4c4a1c40afb58bce85318550c67a2777 ""
+  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1647256762 10260652 8a9e2f8cb8067a9c27ba5fa12acbbc8a ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1646147466 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1646147450 1004 54797486969f23fa377b128694d548df ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1646147450 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -55,8 +55,8 @@
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1646147466 4009 187ea2dc3194cd5a76cd99a8d7a6c4d0 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1646147468 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/setspace/setspace.sty" 1646166360 22913 a27d7908fc6f0385466454a966a316eb ""
-  "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.aux" 1646215036 2891 6e9bf3175128bda5f1dd4e0b41af9e08 "pdflatex"
-  "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex" 1646215035 10965 9bd6c328566a43c0058a89903ac6c224 ""
+  "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.aux" 1647559004 3011 5a8958dda91bc21ebfb9b5af65cb5b50 "pdflatex"
+  "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/cours1.tex" 1647559002 10965 9bd6c328566a43c0058a89903ac6c224 ""
   "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image01.png" 1646148765 53051 085f0d4ad278733b72997edc5731d4df ""
   "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image02.png" 1646149396 68864 9f5db249e47548e43694dc67d36c6100 ""
   "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/Cours1/images/image03_1.png" 1646150669 25285 ae4a05387782e993624f7577fbd88aa6 ""

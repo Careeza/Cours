@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 8}
+
+On se place dans $\mathbb{R}^n$ muni du produit sclaire $<.|.>$ usuel\\
+Soit $u, v \in \mathbb{R}^n$
+\begin{itemize}
+    \item[i)] $c \in \mathbb{R} \tab <u|cv> = c<u|v>$\\
+    Vrai car le produit sclaire est bilinéaire
+    \item[ii)] $c \in \mathbb{R} \tab ||cu|| = c||u||$\\
+    Faux contre exemple $c = -1$ $||-u|| = -||u|| < 0$ impossible car une norme est toujours positif\\ 
+    On a par contre $||cu|| = |c| * ||u||$
+    \item[iii)] $<u|v> - <v|u> = 0$\\
+    Vrai car le produit sclaire est symétrique donc $<u|v> = <v|u> \Leftrightarrow <u|v> - <v|u> = 0$
+    \item[iv)] $||u + v||^2 = ||u||^2 + ||v||^2$ alors u et v sont orthogonaux\\
+    Vrai c'est Pythagore\\
+    Preuve: $||u + v||^2 = <u + v | u + v>$\\ 
+    $\tab[2.8cm] = <u|u> + <u|v> + <v|u> + <v|v>$ Bilinéarité du produit sclaire\\
+    $\tab[2.8cm] = ||u||^2 +||v||^2 + 2<u|v>$ or $<u|v> = 0$ ssi u et v sont orthogonaux\\
+    $\tab[2.8cm]$ donc $||u + v||^2 = ||u||^2 + ||v||^2$ ssi u et v sont orthogonaux
+    \item[v)] Un famille libre de $\mathbb{R}^n$ n'est pas forcement orthogonale\\
+    Vrai exemple la famille $\{\begin{pmatrix}
+        1\\
+        1\\
+    \end{pmatrix}, \begin{pmatrix}
+        1\\
+        0\\
+    \end{pmatrix}\}$ de $\mathbb{R}^2$ est libre et $\left<
+        \begin{pmatrix}
+            1\\
+            1\\
+        \end{pmatrix} | \begin{pmatrix}
+            1\\
+            0\\
+        \end{pmatrix}
+    \right> = 1 * 1 + 1 * 0 = 1 \neq 0$
+    \item[vi)] Une famille orthogonale de vecteurs de $\mathbb{R}^n$ n'est pas forcement libre.\\
+    Vrai Si dans la famille orthogonal il y a des vecteurs nuls alors la famille n'est pas libre\\
+    Par contre si la famille orthogonal n'a aucun vecteur nul, alors la famille est libre
+    \item[vii)] Si on norme des vecteurs orthogonaux (non nuls), alors les vecteurs obtenus ne sont pas forcement orthogonaux.\\
+    Faux Soit $u, v$ deux vecteurs orthogonaux non nul\\
+    On a $<\frac{u}{||u||}|\frac{v}{||v||}> = \frac{<u|v>}{||u|| * ||v||} = \frac{0}{||u|| * ||v||} = 0$\\
+    Donc normaliser ne change pas que deux vecteurs soit orthogonaux
+    \item[viii)] Si W est un sous-espace vectoriel de $\mathbb{R}^n$ engendre par n vecteurs non nuls deux a deux orthogonaux, alors W = $\mathbb{R}^n$.\\
+    Vrai on a vu au vi) que une famille orthogonale est libre donc W est famille de n vecteurs libre, donc W est une base de $\mathbb{R}^n$
+\end{itemize}
+
+\end{document}

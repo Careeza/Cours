@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\part*{DM 2}
+
+$\bullet$ $\Omega = \{1, 2, 3, 4, 5, 6\}^n$ est l'ensemble des résultats possibles\\
+Comme le dé est équilibré, la mesure de probabilité P est une proba uniforme on a:\\
+Soit A une partie de $\Omega$ $P(A) = \frac{Card(A)}{Card(\Omega)}$\\
+$\bullet$ L'experience "obenir un 6 a un lancé" suit la loi de Bernoulli\\
+Donc l'experience "obtenir k 6 sur n lancés" suit la loi binomiale on a donc que\\
+$P(A_k) = \begin{pmatrix}
+    n\\
+    k\\
+\end{pmatrix} (\frac{1}{6})^k * (\frac{5}{6})^{n - k}$\\
+Donc $P(A_0) = \begin{pmatrix}
+    n\\
+    0\\
+\end{pmatrix} (\frac{1}{6})^0 * (\frac{5}{6})^{n} = (\frac{5}{6})^{n}$\\
+Et $P(A_1) = \begin{pmatrix}
+    n\\
+    1\\
+\end{pmatrix} (\frac{1}{6})^1 + (\frac{5}{6})^{n - 1} = \frac{n}{6} * (\frac{5}{6})^{n - k}$\\
+
+$\bullet$ $B_1$ est le complémentaire de $A_0$, car si obtient pas exactement 0 fois le chiffre 6
+alors on a obtenu au moins un 6\\
+$P(B_1) = 1 - P(A_0) = 1 - (\frac{5}{6})^n$\\
+$\bullet$ Soit $A_{1p}$ l'événement on a obtenu au plus 1 fois le chiffre 6\\
+On a $A_{1p} = A_0 \cup A_{1}$\\
+$B_2$ est le complémentaire de $A_{1p}$, car si obtient pas au plus 1 fois le chiffre 6 alors on obtient au moins 2 fois le chiffre 6\\
+$P(B_2) = P(A_{1p}^c) = 1 - P(A_{1p}) = 1 - P(A_0 \cup A_1)$\\
+Or $A_0$ et $A_1$ sont des événement disjoints\\
+$P(B_2) = 1 - (P(A_0) + P(A_1))$\\
+$\tab = 1 - P(A_0) - P(A_1) = 1 - (\frac{5}{6})^n - \frac{n}{6} * (\frac{5}{6})^{n - k}$\\
+$\bullet$ On a déjà calculé la formule générale pour $A_k$\\
+$P(A_k) = \begin{pmatrix}
+    n\\
+    k\\
+\end{pmatrix} (\frac{1}{6})^k * (\frac{5}{6})^{n - k}$\\
+\newpage
+\noindent $\bullet$ Soit $A_{kp}$ l'événement on a obtenu au plus k fois le chiffre 6\\
+$A_{kp} = \cup_{i=0}^{k} A_k$\\
+$P(B_k) = P((A_{k - 1})^c) = 1 - P(A_{k - 1})  = 1 - P(\cup_{i=0}^{k-1} A_k)$\\
+Or tous les événements $A_k$ sont disjoints\\
+Donc $P(B_k) = 1 - \sum_{i=0}^{k-1} P(A_k)$\\
+\end{document}

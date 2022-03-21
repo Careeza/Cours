@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 5}
+
+Soit $(E, <.|.>)$ un espace euclidien de dimension $n \geq 2$ et u un vecteur non nul de E\\
+$V = \{x \in E, <x|u> = 0\}$\\
+On veut montrer que V et $Vect\{u\}$ sont en somme directe\\
+Soit $U = Vect\{u\}$
+\begin{itemize}
+    \item $U \cap V = 0_E$ ?\\
+Soit $x \in U \cap V$ alors $x \in U$ et $x \in V$\\
+Comme $x \in U, \exists \alpha \in \mathbb{R} \mbox{ tq } x = \alpha u$\\
+Comme $x \in U$, on a $<x|u> = 0$\\
+Donc on a $<\alpha u | u> = 0 \Leftrightarrow \alpha <u | u> = 0$ or u est un vecteur non nul donc $<u|u> \neq 0$\\
+Finalement on a que $\alpha = 0$, donc que $x = 0$ et donc que $U \cap V = 0_E$\\
+Donc U et V sont en somme directe\\
+    \item Soit $\varphi$ une application de $E \rightarrow \mathbb{R}$, qui à tout vecteur x associe $<x|u>$\\
+Soit $(x, y) \in E^2$ et $\alpha \in \mathbb{R}$\\
+$\varphi(\alpha x + y) = <\alpha x + y | u> = \alpha <x | u> + <y | u> = \alpha \varphi(x) + \varphi(y)$\\
+Donc $\varphi$ est une forme linéaire\\
+$ker \varphi = \{x \in E, \varphi(x) = 0\} = \{x \in E, <x|u> = 0\} = V$\\
+Comme $\varphi$ est une application linéaire on a que $dim(E) = dim(ker\varphi) + dim(im\varphi)$\\
+Or $\varphi$ va de $E \rightarrow \mathbb{R}$, donc $dim(im \varphi) = 1$\\
+Donc $dim(ker \varphi) = dim(V) = dim(E) - dim(im \varphi) = n - 1$
+    \item On a vu que et U et V était en somme directe de plus $dim(U) + dim(V) = 1 + N - 1 = N = Dim(E)$, donc on a que $U \bigoplus V = E$\\
+Donc on peut définir la projection orthogonal\\
+
+\end{itemize}
+
+
+
+\end{document}

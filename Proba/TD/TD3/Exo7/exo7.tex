@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 7}
+CP : 4 garçon, 6 filles\\
+CE1 : 6 garçon, n filles\\
+Les deux classes dans une même salle\\
+On choisit un élève au hazard:\\
+Trouver n pour que les événements:
+\begin{itemize}
+    \item G = "l'élève est un garçon"
+    \item CP = "l'élève est en CP"
+\end{itemize}
+Soit indépendant\\
+On veut que $P(G \cap CP) = P(G)P(CP)$\\
+$P(G) = \frac{10}{16 + n}$\\
+$P(CP) = \frac{10}{16 + n}$\\
+$P(G) P(CP) = \frac{100}{(16 + n)^2}$\\
+$P(CP \cap G) = \frac{4}{16 + n}$\\
+Donc $\frac{4}{16 + n} = \frac{100}{(16 + n)^2} \Leftrightarrow 4(16 + n) = 100 \Leftrightarrow n = 9$
+\end{document}

@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\def\env@matrix{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+
+\begin{document}
+
+\part*{Exerice 2}
+
+$\bullet$ Soit $M = \begin{pmatrix}
+    a & b & c\\
+    0 & d & e\\
+    0 & 0 & f\\
+\end{pmatrix}, \tab det M = a * d * f$ \vspace*{5mm} \\
+Donc si M est inversible alors $a, d, f \neq 0$ \vspace*{5mm}\\
+$\begin{pmatrix}[ccc|ccc]
+    a & b & c & 1 & 0 & 0\\
+    0 & d & e & 0 & 1 & 0\\
+    0 & 0 & f & 0 & 0 & 1\\
+\end{pmatrix} \rightarrow \begin{pmatrix}[ccc|ccc]
+    a & b & 0 & 1 & 0 & -\frac{c}{f}\\
+    0 & d & 0 & 0 & 1 & -\frac{e}{f}\\
+    0 & 0 & 1 & 0 & 0 & \frac{1}{f}\\
+\end{pmatrix} \rightarrow \begin{pmatrix}[ccc|ccc]
+    a & 0 & 0 & 1 & -\frac{b}{d} & -\frac{c}{f} + \frac{be}{fd}\\
+    0 & 1 & 0 & 0 & \frac{1}{d} & -\frac{e}{fd}\\
+    0 & 0 & 1 & 0 & 0 & \frac{1}{f}\\
+\end{pmatrix}\vspace*{5mm} \\ \rightarrow \begin{pmatrix}[ccc|ccc]
+    1 & 0 & 0 & \frac{1}{a} & -\frac{b}{da} & \frac{be - cd}{fda}\\
+    0 & 1 & 0 & 0 & \frac{1}{d} & -\frac{e}{fd}\\
+    0 & 0 & 1 & 0 & 0 & \frac{1}{f}\\
+\end{pmatrix}$ \vspace*{5mm}\\
+Donc $M^{-1} = \begin{pmatrix}
+    \frac{1}{a} & -\frac{b}{da} & \frac{be - cd}{fda}\\
+    0 & \frac{1}{d} & -\frac{e}{fd}\\
+    0 & 0 & \frac{1}{f}\\
+\end{pmatrix}$\\
+$\bullet$ Soit $u_1 = \begin{pmatrix}
+    a\\
+    0\\
+    0\\
+\end{pmatrix}, \; u_2 = \begin{pmatrix}
+    b\\
+    d\\
+    0\\
+\end{pmatrix} \; u_3 = \begin{pmatrix}
+    c\\
+    e\\
+    f\\
+\end{pmatrix}$
+Pour que $M \in O_3(\mathbb{R})$ il faut:
+\begin{itemize}
+    \item $||u_1|| = ||u_2|| = ||u_3|| = 1 \Leftrightarrow |u_1||^2 = ||u_2||^2 = ||u_3||^2 = 1$
+    \item $<u_1 | u_2> = 0$
+    \item $<u_1 | u_3> = 0$
+    \item $<u_2 | u_3> = 0$
+\end{itemize}
+$||u_1||^2 = <u_1|u_1> = a^2$\\
+Donc $||u_1||^2 = 1 \Leftrightarrow a = 1 \mbox{ ou } a = -1$\\
+\newpage
+\noindent \underline{Cherchons b et d} \vspace*{5mm} \\ 
+$\left\{
+    \begin{array}{ll}
+        b^2 + d^2 = 1\\
+        a * b = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        d^2 = 1\\
+        b = 0 \mbox{ *}\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        d = 1 \mbox{ ou } d = -1\\
+        b = 0 \mbox{ *}\\
+    \end{array}
+\right.$ \vspace*{5mm}\\
+* Car $a \neq 0$\\
+On a pour l'instant:\\
+$M = \begin{pmatrix}
+    \pm 1 & 0 & c\\
+    0 & \pm 1 & e\\
+    0 & 0 & f\\
+\end{pmatrix}$\\
+\underline{Cherchons c, e et f} \vspace*{5mm} \\
+$\left\{
+    \begin{array}{ll}
+        c^2 + d^2 + f^2 = 0\\
+        a * c = 0\\
+        b * e = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        f = 1 \mbox{ ou } f = -1\\
+        c = 0\\
+        e = 0\\
+    \end{array}
+\right.$ \vspace*{5mm}\\
+Donc toute les matrices triangulaire sup dans $O_3(\mathbb{R})$ sont:\vspace*{5mm} \\
+$\begin{pmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}, \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & 0 & -1\\
+\end{pmatrix}, \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & -1 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}, \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & -1 & 0\\
+    0 & 0 & -1\\
+\end{pmatrix}, \vspace*{5mm} \\ 
+\begin{pmatrix}
+    -1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}, \begin{pmatrix}
+    -1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & 0 & -1\\
+\end{pmatrix}, \begin{pmatrix}
+    -1 & 0 & 0\\
+    0 & -1 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}, \begin{pmatrix}
+    -1 & 0 & 0\\
+    0 & -1 & 0\\
+    0 & 0 & -1\\
+\end{pmatrix}$\\
+
+\newpage
+
+\noindent $\bullet$ Soit  $M = \begin{pmatrix}
+    a & b & c\\
+    d & e & f\\
+    g & h & i\\
+\end{pmatrix}$\\
+Soit $v_1 = \begin{pmatrix}
+    a\\
+    d\\
+    g\\
+\end{pmatrix}, v_2 = \begin{pmatrix}
+    b\\
+    e\\
+    h\\
+\end{pmatrix}, v_3 = \begin{pmatrix}
+    c\\
+    f\\
+    i\\
+\end{pmatrix}$\\
+Et $w_1 = \begin{pmatrix}
+    a & b & c
+\end{pmatrix}, w_2 = \begin{pmatrix}
+    d & e & f
+\end{pmatrix}, w_3 = \begin{pmatrix}
+    g & h & i
+\end{pmatrix}$\\
+Comme $M \in O_3(\mathbb{R})$ on a:\\
+$v_1 \circ v_2 = v_1 \circ v_3 = v_2 \circ v_3 = 0$\\ 
+$w_1 \circ w_2 = w_1 \circ w_3 = w_2 \circ w_3 = 0$\\
+\underline{cas 1} : $a \neq 0$ on a directement\\
+$M = \begin{pmatrix}
+    a & 0 & 0\\
+    0 & e & f\\
+    0 & h & i\\
+\end{pmatrix}$\\
+Puis comme $||v_1|| = 1$ on a, $a = 1$\\
+\underline{cas 1.1} : $e \neq 0$ on a directement\\
+$M = \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & e & 0\\
+    0 & 0 & i\\
+\end{pmatrix}$\\
+Puis comme $||v_2|| = ||v_3|| = 1$ on a $e = 1$ et $i = 1$\\
+$M = \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}$\\
+En suivant le même raisonnement on obtient que si $M \in O_3(\mathbb{R})$ il y exactement a 1 sur chaque ligne et sur chaque colonne\\
+Exemple d'une autre matrice $M \in O_3(\mathbb{R})$\\
+$M = \begin{pmatrix}
+    0 & 1 & 0\\
+    1 & 0 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}$
+\end{document}

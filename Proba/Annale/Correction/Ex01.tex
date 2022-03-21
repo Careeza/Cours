@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exercice 1}
+
+1) A et B indépendant si $P(A \cap B) = P(A)P(B)$\\
+2) A, B et C indépendant si
+\begin{itemize}
+    \item $P(A \cap B) = P(A)P(B)$
+    \item $P(A \cap C) = P(A)P(C)$
+    \item $P(B \cap C) = P(B)P(C)$
+    \item $P(A \cap B \cap C) = P(A)P(B)P(C)$
+\end{itemize}
+3) Le nombre de parties a p éléments de n éléments est $\begin{pmatrix}
+    n\\
+    p\\
+\end{pmatrix}$\\
+4) On sait que $Card(P(E)) = 2^n$\\
+donc $Card(P(E) \backslash {\emptyset}) = 2^n -1$\\
+On peut aussi dire $Card(P(E) \backslash {\emptyset}) = \sum_{p=1}^n \begin{pmatrix}
+    n\\
+    p\\
+\end{pmatrix} = \sum_{p=0}^n \begin{pmatrix}
+    n\\
+    p\\
+\end{pmatrix} - \begin{pmatrix}
+    n\\
+    0\\
+\end{pmatrix} = 2^n - 1$\\
+5) $f : E \rightarrow F$\\
+Si $\forall y \in F, card(f^{-1}(\{y\})) = n$\\
+Alors $Card(E) = n card(F)$\\
+6) $card(\{(i_j)_{1 \leq j \leq n} \in \{1, \dots, n\}^p, 1 \leq i_1 < i_2 < \dots < i_p \leq n\})
+= \begin{pmatrix}
+    n\\
+    p\\
+\end{pmatrix}$\\
+7) $card(\{(i_j)_{1 \leq j \leq n} \in \{1, \dots, n\}^p, 1 \leq i_1 \leq i_2 < \dots < i_p \leq n\})$\\
+$= card(\{(i_j)_{1 \leq j \leq n} \in \{1, \dots, n\}^p, 1 \leq i_1 < i_2 < \dots < i_p \leq n\})$ + \\
+$\tab[1.3cm] card(\{(i_j)_{1 \leq j \leq n} \in \{1, \dots, n\}^p, 1 \leq i_1 = i_2 < \dots < i_p \leq n\})$\\
+$= \begin{pmatrix}
+    n\\
+    p\\
+\end{pmatrix} - \begin{pmatrix}
+    n\\
+    p - 1\\
+\end{pmatrix}$\\
+8) Le nombre de façon de choisir les 3 pile est $\begin{pmatrix}
+    6\\
+    3\\
+\end{pmatrix}$ et le cardinal total est $2^6$\\
+Donc la probabilité est $\frac{\begin{pmatrix}
+    6\\
+    3\\
+\end{pmatrix}}{2^6} = \frac{20}{2^6}$
+\end{document}

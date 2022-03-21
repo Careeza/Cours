@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 6}
+
+E = $C^0([-1, 1], \mathbb{R})$\\
+$\varphi: E^2 \rightarrow \mathbb{R}$\\
+$(f, g) \longmapsto \int_{-1}^1 f(t)g(t)dt$
+\begin{itemize}
+    \item[\underline{Symétrie}] $Soit f, g \in E$\\
+$\varphi(f, g) = \int_{-1}^1 f(t)g(t)dt = \int_{-1}^1 g(t)f(t)dt = \varphi(g, f) \tab \checkmark$
+    \item[\underline{Bilinéarité}] $Soit f, g, h \in E \mbox{ et } \alpha, \beta \in \mathbb{R}$\\
+    $\varphi(\alpha f + \beta g, h) = \int_{-1}^1 (\alpha f + \beta g)(t)h(t)dt$\\
+    $\tab[2.2cm]= \int_{-1}^1 (\alpha f)(t)h(t) + (\beta g)(t)h(t)dt$\\
+    $\tab[2.2cm]= \int_{-1}^1 \alpha f(t)h(t) + \beta g(t)h(t)dt$\\
+    $\tab[2.2cm]= \int_{-1}^1 \alpha f(t)h(t) + \int_{-1}^1 \beta g(t)h(t)dt$\\
+    $\tab[2.2cm]= \alpha \int_{-1}^1 f(t)h(t) + \beta \int_{-1}^1 g(t)h(t)dt$\\
+    $\tab[2.2cm]= \alpha \varphi(f, h) + \beta \varphi(g, h)$\\
+    Commme on a montré la symétrie cela suffit pour montrer la bilinéarité $\checkmark$
+    \item[\underline{Définis}] $Soit f \in E$\\
+    $\varphi(f, f) = \int_{-1}^1 f(t)f(t) = \int_{-1}^1 f(t)^2$ or $f(t)^2 \geq 0$ donc $ \int_{-1}^1 f(t)^2 \geq 0$\\
+    Si $\varphi(f, f) = 0 \Leftrightarrow  \int_{-1}^1 f(t)^2 = 0$ or comme $\forall t \in [-1, 1] f(t)^2 \geq 0$\\
+    si on veut que l'intégral soit nul Il faut que $f(t)^2 = 0$ $\forall t \in [-1, 1]$\\
+    donc $f(t) = 0, \; \forall t \in [-1, 1] \Leftrightarrow f(t) = 0_E \tab \checkmark$
+    
+\end{itemize}
+\end{document}

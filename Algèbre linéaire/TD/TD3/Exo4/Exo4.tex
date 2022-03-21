@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{mathabx}
+\usepackage{stmaryrd}
+
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\def\env@matrix{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+
+\begin{document}
+
+\part*{Exerice 4}
+
+$E = \mathbb{R}_2[X]$\\
+$Soit P, Q \in E$ on a $<P|Q> = \displaystyle{\int_{-1}^{1}}P(T)Q(T)~\textrm{d}t$\\
+Soit $\varphi : E \rightarrow E$\\
+$\tab[2mm] \varphi(P)(X) \longmapsto P(-X)$\\
+$\bullet$ Soit $P, Q \in E$ et $\lambda \in \mathbb{R}$\\
+$\varphi(P + \lambda Q)(X) = (P + \lambda Q)(-X) = P(-X) + \lambda Q(-X) = \varphi(P)X + \lambda\varphi(Q)(X)$\\
+Donc $\varphi$ est linéaire\\
+Calculon $<\varphi(P)|\varphi(Q)> = \displaystyle{\int_{-1}^{1}} \varphi(P)(t) \varphi(Q)(t)~\textrm{d}t$\\
+$\tab[3.9cm] = \displaystyle{\int_{-1}^{1}} P(-t)Q(-t)~\textrm{d}t$\\
+On fait un changement de variable\\
+$u = -t$\\
+$du = -1dt \Rightarrow dt = -du$\\
+$t = 1 \Rightarrow u = -1$\\
+$t = -1 \Rightarrow u = 1$\\
+$\displaystyle{\int_{-1}^{1}} P(-t)Q(-t)~\textrm{d}t = \displaystyle{\int_{1}^{-1}} -P(u)Q(u)~\textrm{d}u = -\displaystyle{\int_{-1}^{1}} -P(u)Q(u)~\textrm{d}u$\\
+$\tab[3cm] = \displaystyle{\int_{-1}^{1}} P(u)Q(u)~\textrm{d}u = <P|Q>$\\
+Donc on a bien $<\varphi(P)|\varphi(Q)> = <P|Q>$ $\varphi$ conserve le produit scalaire, donc $\varphi$ est une isométrie\\
+Montrons que $\varphi$ est une symétrie, et comme $\varphi$ est une isométrie sa matrice représentative dans une BON sera orthogonal\\
+$\varphi(\varphi(P))(X) = \varphi(P)(-X) = P(X)$ donc $\varphi \circ \varphi = Id$\\
+Donc $\varphi$ est une symétrie orthogonal\\
+
+\newpage
+
+\noindent Calculons $ker \varphi - Id$ et $ker \varphi + Id$\\
+$(\varphi - Id)(P)(X) = \varphi(P)(X) - P(X) = P(-X) - P(X)$\\
+$P \in ker \varphi - Id \Leftrightarrow  P(-X) - P(X) = 0_E$\\
+$\Leftrightarrow (a(-X)^2 + b -X + c) - (aX^2 + b X + c) = 0$\\
+$\Leftrightarrow aX^2 + b -X + c -aX^2 -b X - c = 0$\\
+$\Leftrightarrow -bX -bX = 0$\\
+$\Leftrightarrow -2bX = 0$\\
+$\Leftrightarrow b = 0$\\
+Donc les polynomes de la forme $aX^2 + c$, sont dans $ker (\varphi - Id)$\\
+$(\varphi + Id)(P)(X) = \varphi(P)(X) + P(X) = P(-X) + P(X)$\\
+$P \in ker \varphi + Id \Leftrightarrow  P(-X) + P(X) = 0_E$\\
+$\Leftrightarrow (a(-X)^2 + b -X + c) + (aX^2 + b X + c) = 0$\\
+$\Leftrightarrow aX^2 -bX + c + aX^2 + bX + c = 0$\\
+$\Leftrightarrow 2aX^2 + 2c = 0$\\
+$\Leftrightarrow 2aX^2 = -2c$\\
+$\Leftrightarrow aX^2 = -c$\\
+Donc il faut que $aX^2$ soit constant ce qui est possible que si $a = 0$\\
+$\Leftrightarrow a = 0$ et $c = 0$\\
+Donc les polynomes de la forme $bx$, sont dans $ker (\varphi + Id)$\\
+Avec $\mathcal{B} = \{1, X, X^2\}$\\
+$\varphi(1)(x) = 1(-x) = 1 = 1(x)$\\
+$\varphi(X)(x) = X(-x) = -x = -X(x)$\\
+$\varphi(X^2)(x) = X^2(-x) = x^2 = X^2(x)$\\
+$Mat_\mathcal{B}(\varphi) = \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & -1 & 0\\
+    0 & 0 & 1\\
+\end{pmatrix}$\\
+$det \varphi = -1$\\
+Valeur propre de $\varphi$ = $\{-1, 1\}$
+
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 7}
+
+$\bullet$ $\mathbb{R}_2[x]$ est un espace vectorielle de dimension 3 car une base $\mathbb{R}_2[x]$ est $Vect\{1, X, X^2\}$\\
+$\bullet$ Soit $aX^2 + bX + c \in \mathbb{R}_2[x]$\\
+On veut $\left\{
+    \begin{array}{ll}
+        P(0) = 0\\
+        P(1) = 0\\
+        P(2) = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        a * 0^2 + b * 0 + c = 0\\
+        a * 1^2 + b * 1 + c = 0\\
+        a * 2^2 + b * 2 + c = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        c = 0\\
+        a + b = 0\\
+        4a + 2b = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        c = 0\\
+        a = -b\\
+        -4b + 2b = 0\\
+    \end{array}
+\right.\\ \Leftrightarrow \left\{
+    \begin{array}{ll}
+        c = 0\\
+        a = 0\\
+        b = 0\\
+    \end{array}
+\right.$\\
+$\bullet$ $f: \mathbb{R}_2[X]^2 \rightarrow \mathbb{R}$\\
+$\tab[0.8cm] P, Q \longmapsto P(0)Q(0) + P(1)Q(1) + P(2)Q(2)$\\
+\\
+Montrons que f est un produit sclaire:\\
+Symétire: soit $P, Q \in \mathbb{R}_2[X]$\\
+$f(P, Q) =  P(0)Q(0) + P(1)Q(1) + P(2)Q(2) =  Q(0)P(0) + Q(1)P(1) + Q(2)P(2) = f(Q, P)$\\
+\\
+Bilinéarité: soit $P, Q, R \in \mathbb{R}_2[X]$ et $\alpha, \beta \in \mathbb{R}$\\
+Comme nous avons prouvé la symétire il suffit de montre que:\\
+$f(\alpha P + \beta Q, R) = f(R, \alpha P + \beta Q) = \alpha f(P, R) + \beta f(Q, R)$ pour la bilinéarité\\
+$f(\alpha P + \beta Q, R) = (\alpha P + \beta Q)(0)R(0) + (\alpha P + \beta Q)(1)R(1) + (\alpha P + \beta Q)(2)R(2)$\\
+$\tab[2.45cm] = \alpha P(0)R(0) + \beta Q(0)R(0) + \alpha P(1)R(1) + \beta Q(1)R(1) + \alpha P(2)R(2) + \beta Q(2)R(2)$
+$\tab[2.45cm] = \alpha (P(0)R(0) + P(1)R(1) + P(2)R(2)) + \beta (Q(0)R(0) + Q(1)R(1) + Q(2)R(2)$\\
+$\tab[2.45cm] = \alpha f(P, R) + \beta f(Q, R)$\\
+\\
+Définis positif: soit $P \in \mathbb{R}_2[X]$\\
+$f(P, P) = P(0)P(0) + P(1)P(1) + P(2)P(2)$\\
+$\tab[1.23cm] = P(0)^2 + P(1)^2 + P(2)^2 \geq 0$\\
+$f(P, P) = 0 \Leftrightarrow P(0)^2 + P(1)^2 + P(2)^2 = 0$\\
+$\tab[1.9cm] \Leftrightarrow P(0)^2 = P(1)^2 + P(2)^2 = 0$\\
+$\tab[1.9cm] \Leftrightarrow P(0) = P(1) + P(2) = 0$\\
+Or on a vu a la question 1 que le seul polynome respectant cette condition est le polynome nul\\
+\\
+$\bullet$ $f(1, X) = 1 * 0 + 1 * 1 + 1 * 1 = 2 \neq 0$\\
+donc la famille $\{1, X, x^2\}$ n'est pas orthogonal\\
+\newpage
+\noindent $\bullet$ Soit $P_0 = (X - 1)(X - 2), P_1 = X(X - 2), P_0 = X(X - 1)$\\
+$f(P_0, P_1) = P_0(0)P_1(0) + P_0(1)P_1(1) + P_0(2)P_1(2) = 0$\\
+$f(P_0, P_2) = P_0(0)P_2(0) + P_0(1)P_2(1) + P_0(2)P_2(2) = 0$\\
+$f(P_1, P_2) = P_1(0)P_2(0) + P_1(1)P_2(1) + P_1(2)P_2(2) = 0$\\
+Donc la famille $\{P_0, P_1, P_2\}$ est orthogonal\\
+$||P_0|| = \sqrt{f(P_0, P_0)} = \sqrt{4} = 2$\\
+$||P_1|| = \sqrt{f(P_1, P_1)} = \sqrt{1} = 1$\\
+$||P_2|| = \sqrt{f(P_2, P_2)} = \sqrt{4} = 2$\\
+Donc la famille $\{\frac{P_0}{2}, P_1, \frac{P_2}{2}\}$ est orthonormée\\
+\end{document}

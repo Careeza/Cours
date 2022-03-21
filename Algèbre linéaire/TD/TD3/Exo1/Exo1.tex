@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exerice 1}
+
+$M = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & c\\
+    a & \sqrt{2} & d\\
+    \sqrt{3} & b & e\\
+\end{pmatrix}$\\
+$u_1 = \frac{1}{\sqrt{6}}\begin{pmatrix}
+    \sqrt{3}\\
+    a\\
+    \sqrt{3}\\
+\end{pmatrix}, u_2 = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    \sqrt{2}\\
+    \sqrt{2}\\
+    b\\
+\end{pmatrix}, u_3 = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    c\\
+    d\\
+    e\\
+\end{pmatrix}$\\
+$||u_1||^2 = <u_1|u_1> = \frac{1}{6}(3 + a^2 + 3) = 1 + \frac{a^2}{6}$\\
+$||u_2||^2 = <u_2|u_2> = \frac{1}{6}(2 + 2 + b^2) = \frac{2}{3} + \frac{b^2}{6}$\\
+$||u_3||^2 = <u_3|u_3> = \frac{1}{6}(c^2 + d^2 + e^2)$\\
+Or pour que $M \in O_3(\mathbb{R})$ il faut que $||u_1|| = ||u_2|| = ||u_3|| = 1$\\
+$||u_1|| = 1 \Leftrightarrow ||u_1||^2 = 1 \Leftrightarrow 1 + \frac{a^2}{6} = 1 \Leftrightarrow a = 0$\\
+$||u_2|| = 1 \Leftrightarrow ||u_2||^2 = 1 \Leftrightarrow \frac{2}{3} + \frac{b^2}{6} = 1$\\
+$\Leftrightarrow b^2 = 2 \Leftrightarrow b \pm \sqrt{2}$\\
+$M = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & c\\
+    0 & \sqrt{2} & d\\
+    \sqrt{3} & \pm \sqrt{2} & e\\
+\end{pmatrix}$\\
+On a aussi que $<u_1 | u_2> = 0$\\
+$<u_1 | u_2> = \sqrt{3} * \sqrt{2} + 0 * sqrt(2) \pm \sqrt{3} * \sqrt{2}$\\
+$<u_1 | u_2> = \sqrt{6} \pm \sqrt{6}$\\
+Donc $b = -\sqrt{2}$\\
+$M = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & c\\
+    0 & \sqrt{2} & d\\
+    \sqrt{3} & -\sqrt{2} & e\\
+\end{pmatrix}$\\
+
+\newpage
+
+On a finalement $\left\{
+    \begin{array}{ll}
+        ||u_3|| = 1\\
+        <u_1 | u_3> = 0\\
+        <u_2 | u_3> = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        ||u_3||^2 = 1\\
+        <u_1 | u_3> = 0\\
+        <u_2 | u_3> = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        \frac{1}{6}(c^2 + d^2 + e^2) = 1\\
+        \sqrt{3} * c + \sqrt{3} * e = 0\\
+        \sqrt{2} * c + \sqrt{2} * d - \sqrt{2} * e = 0\\
+    \end{array}
+\right. \vspace*{5mm} \\\Leftrightarrow \left\{
+    \begin{array}{ll}
+        c^2 + d^2 + e^2 = 6\\
+        \sqrt{3} * c = -\sqrt{3} * e\\
+        \sqrt{2} * c + \sqrt{2} * d - \sqrt{2} * e = 0\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        c^2 + d^2 + e^2 = 6\\
+        c = -e\\
+        -\sqrt{2} * e - \sqrt{2} * e = - \sqrt{2} * d\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        (-e)^2 + d^2 + e^2 = 6\\
+        c = -e\\
+        2 * e = d\\
+    \end{array}
+\right. \vspace*{5mm} \\ \Leftrightarrow \left\{
+    \begin{array}{ll}
+        (-e)^2 + (2e)^2 + e^2 = 6\\
+        c = -e\\
+        d = 2e\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        e^2 + 4e^2 + e^2 = 6\\
+        c = -e\\
+        d = 2e\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        6e^2 = 6\\
+        c = -e\\
+        d = 2e\\
+    \end{array}
+\right. \Leftrightarrow \left\{
+    \begin{array}{ll}
+        e^2 = 1\\
+        c = -e\\
+        d = 2e\\
+    \end{array}
+\right. \vspace*{5mm} \\\Leftrightarrow \left\{
+    \begin{array}{ll}
+        e = 1\\
+        c = -1\\
+        d = 2\\
+    \end{array}
+\right. \mbox{ ou } \left\{
+    \begin{array}{ll}
+        e = -1\\
+        c = 1\\
+        d = -2\\
+    \end{array}
+\right.$\vspace*{5mm} \\
+Donc $M = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & -1\\
+    0 & \sqrt{2} & 2\\
+    \sqrt{3} & -\sqrt{2} & 1\\
+\end{pmatrix}$ ou $M = \frac{1}{\sqrt{6}} \begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & 1\\
+    0 & \sqrt{2} & -2\\
+    \sqrt{3} & -\sqrt{2} & -1\\
+\end{pmatrix}$\\
+$\bullet M \in SO_3(\mathbb{R}) \Leftrightarrow det(M) = 1$\\
+$\underline{Cas 1}:\\
+det(M) = (\frac{1}{\sqrt(6)})^3 * det
+\begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & -1\\
+    0 & \sqrt{2} & 2\\
+    \sqrt{3} & -\sqrt{2} & 1\\
+\end{pmatrix} = (\frac{1}{\sqrt(6)})^3 * (\sqrt{3} * det \begin{pmatrix}
+    \sqrt{2} & 2\\
+    -\sqrt{2} & 1\\
+\end{pmatrix} + \sqrt{3} * det \begin{pmatrix}
+    \sqrt{2} & - 1\\
+    \sqrt{2} & 2\\
+\end{pmatrix})$\\
+$= (\frac{1}{\sqrt(6)})^3 * (\sqrt{3}(\sqrt{2}*1 + 2*\sqrt{2}) + \sqrt{3} * (\sqrt{2} * 2 + \sqrt{2} * 1))$\\
+$= (\frac{1}{\sqrt(6)})^3 * (3 * \sqrt{6} + 3 * \sqrt{6})$\\
+$= (\frac{1}{\sqrt(6)})^3 * (6 * \sqrt{6}) = 1$\\
+Donc dans ce cas $M \in SO_3(\mathbb{R})$\\
+\vspace*{5mm}
+$\underline{Cas 2}:\\
+det(M) = (\frac{1}{\sqrt(6)})^3 * det
+\begin{pmatrix}
+    \sqrt{3} & \sqrt{2} & 1\\
+    0 & \sqrt{2} & -2\\
+    \sqrt{3} & -\sqrt{2} & -1\\
+\end{pmatrix} = (\frac{1}{\sqrt(6)})^3 * (\sqrt{3} * det \begin{pmatrix}
+    \sqrt{2} & -2\\
+    -\sqrt{2} & -1\\
+\end{pmatrix} + \sqrt{3} * det \begin{pmatrix}
+    \sqrt{2} & 1\\
+    \sqrt{2} & -2\\
+\end{pmatrix})\\$
+$= (\frac{1}{\sqrt(6)})^3 * (\sqrt{3}(\sqrt{2}*-1 - 2*\sqrt{2}) + \sqrt{3} * (\sqrt{2} * -2 - \sqrt{2} * 1))$\\
+$= (\frac{1}{\sqrt(6)})^3 * (-3 * \sqrt{6} - 3 * \sqrt{6})$\\
+$= (\frac{1}{\sqrt(6)})^3 * (-6 * \sqrt{6}) = -1$\\
+Donc dans ce cas $M \notin SO_3(\mathbb{R})$
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Exercice 3}
+
+1) $\Omega = \{A \subset \{1, \dots, 150\}, card(A) = k\}$\\
+Donc si $\omega \in \Omega$\\
+$\omega = \{i_1, \dots, i_k\}$\\
+Et $i_1, \dots, i_k$ ce sont les sièges réservés\\
+2)
+\begin{itemize}
+    \item[a)]
+    \begin{itemize}
+        \item Si $k < 50, P(A_1) = 0$
+        \item Si $k \geq 50, P(A_1) = \frac{\begin{pmatrix}
+            100\\
+            k - 50\\
+        \end{pmatrix}}{Card(\Omega)} = \frac{\begin{pmatrix}
+            100\\
+            k - 50\\
+        \end{pmatrix}}{\begin{pmatrix}
+            150\\
+            k\\
+        \end{pmatrix}}$
+    \end{itemize}
+    \item[b)]
+    \begin{itemize}
+        \item Si $k < 100, P(A_1 \cap A_2) = 0$
+        \item Si $k \geq 100, P(A_1 \cap A_2) = \frac{\begin{pmatrix}
+            50\\
+            k - 100\\
+        \end{pmatrix}}{\begin{pmatrix}
+            150\\
+            k\\
+        \end{pmatrix}}$
+    \end{itemize}
+    \item[c)]
+    \begin{itemize}
+        \item Si $k < 150, P(A_1 \cap A_2 \cap A_3) = 0$
+        \item Si $k = 150, P(A_1 \cap A_2 \cap A_3) = 1$
+    \end{itemize}
+\end{itemize}
+5) $E^c = A_1 \cup A_2 \cup A_3$\\
+6) $P(A_1 \cup A_2 \cup A_3) = P(A_1 \cup (A_2 \cup A_3))$\\
+$\tab[3.15cm] = P(A_1) + P(A_2 \cup A_3) - P(A_1 \cap (A_2 U A_3))$\\
+$\tab[3.15cm] = P(A_1) + P(A_2) + P(A_3) - P(A_2 \cap A_3) - P(A_1 \cap (A_2 U A_3))$\\
+De plus $P(A_1 \cap (A_2 \cup A_3)) = P((A_1 \cap A_2) \cup (A_1 \cap A_3))$\\
+$\tab[4.25cm] = P(A_1 \cap A_2) + P(A_1 \cap A_3) - P(A_1 \cap A_2 \cap A_3)$\\
+Donc $P(A_1 \cup A_2 \cup A_3) =$\\
+$P(A_1) + P(A_2) + P(A_3) - P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_3)$\\
+7) $P(E) = 1 - P(E^c)$\\
+$\tab[1.4cm] = 1 - P(A_1 \cup A_2 \cup A_3)$\\
+$\tab[1.4cm] = 1 - 3 P(A_1) + 3 P(A_1 \cap A_2) - P(A_1 \cap A_2 \cap A_3)$\\
+car $P(A_1) = P(A_2) = P(A_3)$\\
+et $P(A_1 \cap A_2) = P(A_1 \cap A_3) = P(A_2 \cap A_3)$\\
+Si $k \geq 148 P(E) = 0$
+Si $k \in \{100, \dots, 147\} P(E) = 1 - \frac{3}{\begin{pmatrix}
+    150\\
+    k\\
+\end{pmatrix}} \left(
+    \begin{pmatrix}
+        100\\
+        k - 50\\
+    \end{pmatrix} - \begin{pmatrix}
+        50\\
+        k - 100\\
+    \end{pmatrix}
+\right)$\\
+Si $k \in \{50, \dots, 99\} P(E) = 1 - \frac{3}{\begin{pmatrix}
+    150\\
+    k\\
+\end{pmatrix}} \begin{pmatrix}
+    100\\
+    k - 50\\
+\end{pmatrix}$\\
+si $k \leq 49, P(E) = 1$
+\end{document}
