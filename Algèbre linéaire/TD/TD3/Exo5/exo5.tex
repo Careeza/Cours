@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\scalaire}[2]{\left< #1 | #2\right>}
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+% \color{red}
+
+\begin{document}
+
+\part*{Exerice 5}
+
+On étudie $ker(u - Id_E)$ et $Im(u - Id_E)$\\
+soit $x \in ker(u - Id_E)$ et $y \in Im(u - Id_E)$\\
+On va étudier $<x|y>$\\
+$x \in ker(u - Id_E) \Rightarrow (u - Id_E)(x) = 0$\\
+$\tab[2.8cm] \Rightarrow u(x) - x = 0$\\
+$\tab[2.8cm] \Rightarrow u(x) = x$\\
+$y \in Im(u - Id_E) \Rightarrow \exists x' \in (u - Id_E)$ tq $(u - Id_E)x' = y$\\
+$\tab[2.7cm] \Rightarrow u(x') - x' = y$\\
+% $\tab[2.7cm] \Rightarrow u(x) = x$\\
+On a $\scalaire{x}{y} = \scalaire{x}{u(x') - x'}$\\
+$\tab[1.75cm] = \scalaire{x}{u(x')} - \scalaire{x}{x'}$\\
+$\tab[1.75cm] = \scalaire{u(x)}{u(x')} - \scalaire{x}{x'}$\\
+Or comme u est une isométrie le produit scalaire reste inchangé.\\
+$\tab[1.75cm] = \scalaire{x}{x'} - \scalaire{x}{x'}$\\
+$\tab[1.75cm] = 0$\\
+Donc $ker(u - Id_E)$ et $Im(u - Id_E)$ sont orthogonaux\\
+Comme $ker(u - Id_E)$ et $Im(u - Id_E)$ sont orthogonaux on a que:\\
+$ker(u - Id_E)$ et $Im(u - Id_E)$ sont libres\\
+$ker(u - Id_E) \cap Im(u - Id_E) = \{0\}$\\
+Et on a que $dim(U - Id_E) = dim(ker(u - Id_E)) + dim(Im(u - Id_E))$\\
+Or $dim(U - Id_E) = dim(E)$, alors $dim(ker(u - Id_E)) + dim(Im(u - Id_E)) = dim(E)$\\
+Donc $ker(u - Id_E) \oplus Im(u - Id_E) = E$\\
+
+\end{document}

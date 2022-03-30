@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+% \color{red}
+
+\begin{document}
+
+\part*{Exerice 6}
+
+$X : \Omega \rightarrow \{0, \dots, N\}$ $N \geq 1$
+\paragraph{\underline{Méthode 1}:} $\sum_{k = 0}^{N-1}P(X > k)$\\
+$\tab = \sum_{k=0}^{N-1} \sum_{j = k+1}^N P(X=j)$ \vspace{2mm}\\
+$\tab = \sum_{0 \leq k < j \leq N} P(X=j)$\\
+$\tab = \sum_{j = 1}^N \sum_{k=0}^{j-1} P(X=j) = \sum_{j = 1}^N jP(X=j)$\\
+\paragraph{\underline{Méthode 2}:\\}
+$\sum_{k = 1}^N kP(X=k) = \sum_{k =1}^N k(P(X > k - 1) - P(X > k))$\\
+$\tab[2.8cm] = \sum_{k =1}^N k\left(P(X > k - 1) - \sum_{k =1}^N P(X > k)\right)$\\
+$\tab[2.8cm] = \sum_{k =0}^{N -1} (k + 1)P(X > k) - \sum_{k =1}^N kP(X > k)$\\
+$\tab[2.8cm] = \sum_{k =0}^{N -1} (k + 1)P(X > k) -  \sum_{k = 0}^{N - 1} kP(X > k)$ (*)\\
+$\tab[2.8cm] = \sum_{k =0}^{N -1} P(X > k)$\vspace{1cm}\\
+(*) on a $\sum_{k =1}^N kP(X > k)$ = $\sum_{k = 0}^{N - 1} kP(X > k) - 0(P(X > 0)) + NP(X > N)$\\
+or $P(X > N) = 0$ car $X$ ne peut pas être pas plus grand que N\\
+Donc $\sum_{k =1}^N kP(X > k)$  = $\sum_{k = 0}^{N - 1} kP(X > k)$
+\newpage
+\noindent 1- $\Omega = \{1, \dots, N\}^n$\\
+$Card(\Omega) = N^n$\\
+$P(X \leq k) = \left(\frac{k}{N}\right)^n$\\
+$P(X > k) = 1 - P(X \leq k) = 1 - \left(
+    \frac{k}{N}
+\right)^n$, $\forall k \geq 1$\\
+$\sum_{k=0}^{N-1} P(X > k) = \sum_{k=0}^{N-1} \left(1 - \left(\frac{k}{N}\right)^n\right) = N - \sum_{k=1}^{N-1} \left(\frac{k}{N}\right)^n$\\
+2- $P(X = k) = P(X \leq k) - P(X \leq k - 1) = \left(\frac{k}{N}\right)^n - \left(\frac{k-1}{N}\right)^n$, $\forall k \in \{1, \dots, N\}$
+\end{document}

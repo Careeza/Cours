@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\def\env@matrix{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+
+
+\newcommand{\scalaire}[2]{\left< #1 | #2\right>}
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+
+\begin{document}
+
+\part*{Exerice 1}
+
+On sait que la symétrie orthogonal est égal a $s = 2p - Id$\\
+$p(\begin{pmatrix}
+    1\\
+    0\\
+\end{pmatrix}) = \frac{\scalaire{\begin{pmatrix}
+    1\\
+    0\\
+\end{pmatrix}}{\begin{pmatrix}
+    \cos \alpha\\
+    \sin \alpha
+\end{pmatrix}}}{||\begin{pmatrix}
+    \cos \alpha\\
+    \sin \alpha\\
+\end{pmatrix}||} \begin{pmatrix}
+    \cos \alpha\\
+    \sin \alpha\\
+\end{pmatrix} = \begin{pmatrix}
+    \cos \alpha * \cos \alpha\\
+    \cos \alpha * \sin \alpha\\
+\end{pmatrix}$\\
+$p(\begin{pmatrix}
+    0\\
+    1\\
+\end{pmatrix}) = \frac{\scalaire{\begin{pmatrix}
+    0\\
+    1\\
+\end{pmatrix}}{\begin{pmatrix}
+    \cos \alpha\\
+    \sin \alpha
+\end{pmatrix}}}{||\begin{pmatrix}
+    \cos \alpha\\
+    \sin \alpha\\
+\end{pmatrix}||} \begin{pmatrix}
+    \cos \alpha\\
+    \sin \alpha\\
+\end{pmatrix} = \begin{pmatrix}
+    \sin \alpha * \cos \alpha\\
+    \sin \alpha * \sin \alpha\\
+\end{pmatrix}$\\
+\\
+$P = \begin{pmatrix}
+    \cos^2 \alpha & \cos \alpha \sin \alpha\\
+    \cos \alpha \sin \alpha & \sin^2 \alpha\\
+\end{pmatrix}$ \vspace{3mm} \\
+$S = 2P - I_2 = 2\begin{pmatrix}
+    \cos^2 \alpha & \cos \alpha \sin \alpha\\
+    \cos \alpha \sin \alpha & \sin^2 \alpha\\
+\end{pmatrix} - \begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+\end{pmatrix} = \begin{pmatrix}
+    2 \cos^2 \alpha - 1 & 2 \cos \alpha \sin \alpha\\
+    2 \cos \alpha \sin \alpha & 2 \sin^2 \alpha - 1\\
+\end{pmatrix}$\\
+$\tab[2.1cm]= \begin{pmatrix}
+    \cos(2 \alpha) & \sin(2 \alpha)\\
+    \sin(2 \alpha) & -\cos(2 \alpha)\\
+\end{pmatrix}$\\
+\\
+2) $S_\alpha S_\beta = \begin{pmatrix}
+    \cos(2 \alpha) & \sin(2 \alpha)\\
+    \sin(2 \alpha) & -\cos(2 \alpha)\\
+\end{pmatrix} \begin{pmatrix}
+    \cos(2 \beta) & \sin(2 \beta)\\
+    \sin(2 \beta) & -\cos(2 \beta)\\
+\end{pmatrix} $\\
+$\tab[1.35cm] = \begin{pmatrix}
+    \cos(2 \alpha) \cos(2 \beta) + \sin(2 \alpha) \sin(2 \beta) & \cos(2 \alpha) \sin(2 \beta) - \sin(2 \alpha) \cos(2 \beta)\\
+    \sin(2 \alpha) \cos(2 \beta) - \cos(2 \alpha) \sin(2 \beta) & \sin(2 \alpha) \sin(2 \beta) + \cos(2 \alpha) \cos(2 \beta) \\
+\end{pmatrix}$\\
+$\tab[1.35cm] = \begin{pmatrix}
+    \cos(2 \alpha - 2 \beta) & -\sin(2 \alpha - 2 \beta)\\
+    \sin(2 \alpha - 2 \beta) & \cos(2 \alpha - 2 \beta) \\
+\end{pmatrix}$\\
+Matrice de rotation d'angle $2 (\alpha - \beta) = R_{2(\alpha - \beta)}$\\
+$S_\beta S_\alpha$ = Matrice de rotation d'angle $2 (\beta - \alpha) = R_{2(\beta - \alpha)}$
+\newpage
+\noindent 3) Soit un angle $\theta$ on prend $\alpha = \frac{1}{2} \theta$ et $\beta = 0$ on a bien que $2(\alpha - \beta) = \theta$\\
+Donc la rotation d'angle $\theta$ peut être écris comme $R_{\theta} = S_{\frac{\theta}{2}} S_{0}$\\
+4) Non le groupe O(P) n'est pas commutatif car $S_{0} S_{\frac{\pi}{4}} = R_{\frac{\pi}{2}} \neq R_{-\frac{\pi}{2}} = S_{\frac{\pi}{4}} S_{0}$
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 13}
+
+Pierre a une chaussette mais a égaré la deuxième. Celle-ci a une probabilité p $(p > 0.1)$ d'être
+dans sa commode, qui comporte n tiroirs, et peut être dans n'importe quel tiroir. Pierre décide
+d'ouvrir k tiroirs $(1 \leq k \leq n)$ : s'il trouve sa chaussette, c'est qu'elle était dans la commode ;
+s'il ne la trouve pas, il se dit que sans doute elle n'y était pas. On aimerait connaître le nombre
+minimum de tiroirs à ouvrir pour que Pierre se trompe avec une probabilité inférieure à 0.1.\\
+T l'événement "Pierre se trompe."\\
+C l'événement "La chaussette est dans la commode."
+\begin{enumerate}
+    \item $P(T|C) = \frac{n - k}{n}$ \tab $P(T|C^c) = 0$\\
+        On a que $P(T) = P(T|C)P(C) + P(T|C^c)P(C^c) = P(T|C)P(C) = \frac{n - k}{n}p$
+    \item On veut que $P(T) < 0.1 \Leftrightarrow \frac{n - k}{n}p < 0.1 \Leftrightarrow (n - k)p < 0.1n$\\
+        $\tab[3.85cm] \Leftrightarrow n - k < \frac{0.1n}{p} \Leftrightarrow k > n - \frac{0.1n}{p}$\\
+        Donc on prend k = $\lceil n(1 - \frac{0.1}{p}) \rceil$
+    \item On a pris $p > 0.1$ car si $p < 0.1$ on a $\frac{0.1n}{p} > n$ donc $n - \frac{0.1n}{p} < 0$\\
+    Donc k = 0 suffit
+\end{enumerate}
+
+\end{document}

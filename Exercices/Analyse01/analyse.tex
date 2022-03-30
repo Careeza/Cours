@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\NewDocumentCommand{\mylim}{ O{n} O{\infty}}{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{Sup}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice}
+
+$\sum_{n \geq 1} (1 + \frac{1}{n})^{n^2} x^n$\\
+$a_n = (1 + \frac{1}{n})^{n^2}$\\
+Étudion $\sqrt[n]{a_n} = \sqrt[n]{(1 + \frac{1}{n})^{n^2}} = (1 + \frac{1}{n})^n$\\
+Or $(1 + \frac{1}{n})^n \mylim e$\\
+Donc d'après Cauchy on a $R = \frac{1}{e} = e^{-1}$\\
+Si $x = e^{-1}$ on a:\\
+$\sum_{n \geq 1} (1 + \frac{1}{n})^{n^2} e^{-n} = \sum_{n \geq 1} e^{n^2 ln(1 + \frac{1}{n})}e^{-n}$\\
+$\tab[2.7cm] = \sum_{n \geq 1} e^{n^2 (\frac{1}{n} + \frac{1}{2n^2}o(\frac{1}{n^2})) -n}$\\
+$\tab[2.7cm] = \sum_{n \geq 1} e^{n + \frac{1}{2} + o(1) -n}$\\
+$\tab[2.7cm] = \sum_{n \geq 1} e^{\frac{1}{2} + o(1)}$ Cette série diverge
+
+\end{document}

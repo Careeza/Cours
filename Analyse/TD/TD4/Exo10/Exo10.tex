@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{\sup}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 10}
+
+$\sum_{n \geq 0} \frac{x^n}{(2n)!}$\\
+$a_n = \frac{1}{(2n)!}$\\
+$\frac{a_{n + 1}}{a_n} = \frac{n!}{(n + 1)!} = \frac{1}{n + 1} \mylim{n}{\infty} 0 = l$\\
+Donc d'après d'Alembert on a que, le rayon de convergence de cette série entière est:\\
+$R = \frac{1}{l} = \frac{1}{0} = +\infty$ par convention\\
+$S(x) = \sum_{n \geq 0} \frac{x^n}{(2n)!}$\\
+On fait un changement de variable $x' = \sqrt{x}$\\
+$S(x') = \sum_{n \geq 0} \frac{x'^{2n}}{(2n)!} = cosh(x')$\\
+Donc  $S(x) = cosh(\sqrt{x})$\\
+\end{document}

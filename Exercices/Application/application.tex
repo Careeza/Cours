@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\NewDocumentCommand{\mylim}{ O{n} O{\infty}}{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{Sup}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Application}
+
+\paragraph{\underline{Exemple}}:
+$(1+x)y' = \frac{1}{2}y$ et $y(0) = 1$ (E)\\
+Je cherche une solution de (E) sous la forme d'une série entière.\\
+$f(x) = \sum_{n=0}^{\infty} a_n x_n$ de rayon de convergence $R > 0$\\
+$f$ est $C^{\infty}$ sur $]-R, R[$, et $f'(x) = \sum_{n=0}^{\infty} n a_n x_{n-1}$\\
+$(1 + x)f'(x)$ = $\sum_{n=1}^{\infty} n a_n x^{n-1} + \sum_{n=0}^{\infty} n a_n x^n$\\
+Changement d'indice dans la première somme m = n - 1\\
+$\sum_{m=0}^{\infty} (m + 1) a_{m + 1} x^{m} + \sum_{n=0}^{\infty} n a_n x^n$\\
+$= \sum_{n=0}^{\infty} ((n + 1)a_{n + 1} + na_n)x^n$\\
+f est solution de (E) $\Rightarrow$ $\sum_{n=0}^{\infty} ((n + 1)a_{n + 1} + na_n)x^n = \sum_{n=0}^{\infty} \frac{1}{2}a_n x^n$, $\forall x \in ]-R, R[$ \vspace{2mm}\\
+$\tab[3.2cm] \Rightarrow \forall n \in \mathbb{N}$, $(n +1)a_{n+1} + na_n = \frac{1}{2}a_n$\\
+$\tab[3.2cm] \Rightarrow \forall n \in \mathbb{N}$, $(n +1)a_{n+1} = (\frac{1}{2} - n)a_n$\\
+Je sais que $f(0) = 1 \Rightarrow a_0 = f(0) = 1$\\
+Donc $a_0 = 1$\\
+$a_1 = \frac{1}{2}a_0 = \frac{1}{2}$\\
+$a_2 = \frac{1}{2}(\frac{1}{2} - 1)a_1 = \frac{\frac{1}{2}(\frac{1}{2} - 1)}{2}$\vspace{2mm}\\
+$a_n = \frac{\frac{1}{2}(\frac{1}{2} - 1)(\frac{1}{2} - 2) \dots (\frac{1}{2} - n + 1)}{n!}$\\
+Soit $f(x) = 1 + \sum_{n=1}^{\infty} a_n x_n$\\
+Rayon de convergence $\frac{a_{n+1}}{a_n}$ = $\frac{(\frac{1}{2} - n)a_n}{(n+1)a_n}$ = $\frac{n - \frac{1}{2}}{n + 1}$ $\mylim 1 = l$\\
+$R = \frac{1}{l} = 1$\\
+Tous les calculs précedents sont valides\\
+Remarque (E) a une unique solution $\int \frac{y'}{y}$ = $\int \frac{1}{2(1 + x)}$\\
+\newpage
+\noindent $y : x \longmapsto \sqrt{1 + x}$\\
+Par unicité, $\forall x \in ]-1, 1[, \sqrt{1 + x} = 1 + \sum_{n=1}^{\infty} a_n x_n$
+\end{document}

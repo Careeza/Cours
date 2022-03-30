@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{\sup}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 7}
+
+$\begin{matrix}
+    1) \;f(x) = \frac{1}{1 - x} & f(0) = 1\\
+    f'(x) = \frac{1}{(1 - x)^2} & f'(0) = 1\\
+    f''(x) = \frac{2}{(1 - x)^3} & f''(0) = 2\\
+    f^{(3)}(x) = \frac{2 * 3}{(1 - x)^4} & f^{(3)}(0) = 6\\
+    f^{(n)}(x) = \frac{n!}{(1 - x)^n} & f^{(n)}(0) = n!\\
+\end{matrix}$\\
+On a que $S(x) = \sum_{n \geq 0} a_n x^n$ avec $a_n = \frac{S^{(n)}(0)}{n!}$\\
+Soit $f(x) = \frac{1}{1 -x} = \sum_{n \geq 0} \frac{f^{(n)}(0)}{n!} x^n = \sum_{n \geq 0} \frac{n!}{n!}x^n = \sum_{n \geq 0} x^n$\\
+Étudions son rayon de convergence:\\
+On a $a_n = 1$\\
+Donc $\sqrt[n]{1} = 1$\\
+Donc d'après Riemann le rayon de convergence $R = \frac{1}{1} = 1$\\
+$f(1) = \sum_{n \geq 0} 1^n = \sum_{n \geq 0} 1$ diverge\\
+$f(-1) = \sum_{n \geq 0} (-1)^n = \sum_{n \geq 0} 1$ diverge\\
+Donc le domaine de convergence est $]-1, 1[$\\
+2) $(\frac{1}{1 - x})' = \frac{1}{(1 - x)^2}$\\
+Soit $x \in ]-1, 1[$\\
+Donc $\frac{1}{(1 - x)^2} = \left(\sum_{n \geq 0} x^n\right)' = \sum_{n \geq 0} n x^{n - 1}$\\
+On a donc que le rayon de convergence de cette série est le même que celui de $\sum_{n \geq 0} x^n$\\
+$f(1) = \sum_{n \geq 0} n$ diverge\\
+$f(-1) = \sum_{n \geq 0} (-1)^n n$ diverge, car $n$ ne tend pas vers 0\\
+Donc le domaine de convergence est $]-1, 1[$\\
+\newpage
+\noindent 3) $ln(1+x)' = \frac{1}{1+x}$\\
+Soit $x \in ]-1, 1[$\\
+On fait un changement de variable $x' = -x$\\
+$\frac{1}{1 - x'} = \sum_{n \geq 0} x'^n$\\
+$\frac{1}{1 + x} = \sum_{n \geq 0} (-x)^n$\\
+$\frac{1}{1 + x} = \sum_{n \geq 0} (-1)^n x^n$\\
+On a que $ln(1 + x) - ln(1)$ = $\int_0^{x} \sum_{n \geq 0} (-1)^n t^n dt = \sum_{n \geq 0} \frac{(-1)^n}{n + 1} x^{n + 1}$\\
+$ln(1 + x) = \sum_{n \geq 0} \frac{(-1)^n}{n + 1} x^{n + 1} = \sum_{n \geq 1} (-1)^{n - 1} \frac{x^n}{n}$\\
+4) Le développement en série entière de $e^x$ est connu:\\
+On a $e^x = \sum_{n \geq 0} \frac{x^n}{n!}$\\
+Son rayon de convergence est $R = +\infty$\\
+Et son domaine de convergence est $\mathbb{R}$\\
+5) $\cos(x)$\\
+$\cos(\theta) = \frac{e^{i \theta} + e^{-i \theta}}{2} = \frac{1}{2} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} + \sum_{n \geq 0} \frac{(-i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \frac{1}{2} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} + \sum_{n \geq 0} (-1)^n \frac{(i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \frac{1}{2} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} + \left(\sum_{n \mbox{ impair}} -\frac{(i \theta)^n}{n!} + \sum_{n \mbox{ pair}} \frac{(i \theta)^n}{n!}\right)\right)$\\
+$\tab[3.05cm] = \frac{1}{2} \left(2 * \sum_{n \mbox{ pair}} \frac{(i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \sum_{n \geq 0} \frac{(i \theta)^{2n}}{(2n)!}$\\
+$\tab[3.05cm] = \sum_{n \geq 0} \frac{i^{2n}\theta^{2n}}{(2n)!}$\\
+$\tab[3.05cm] = \sum_{n \geq 0} \frac{(-1)^{n}\theta^{2n}}{(2n)!}$\\
+Même rayon de convergence que $e(x)$ $R = \infty$, et le domaine de convergence est $\mathbb{R}$\\
+
+\newpage
+\noindent6) $\sin(x)$\\
+$\sin(\theta) = \frac{e^{i \theta} - e^{-i \theta}}{2i} = \frac{1}{2i} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} - \sum_{n \geq 0} \frac{(-i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \frac{1}{2i} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} - \sum_{n \geq 0} (-1)^n \frac{(i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \frac{1}{2i} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} - \left(\sum_{n \mbox{ impair}} -\frac{(i \theta)^n}{n!} + \sum_{n \mbox{ pair}} \frac{(i \theta)^n}{n!}\right)\right)$\\
+$\tab[3.05cm] = \frac{1}{2i} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} - \left(-\sum_{n \mbox{ impair}} \frac{(i \theta)^n}{n!} + \sum_{n \mbox{ pair}} \frac{(i \theta)^n}{n!}\right)\right)$\\
+$\tab[3.05cm] = \frac{1}{2i} \left(\sum_{n \geq 0} \frac{(i \theta)^n}{n!} + \sum_{n \mbox{ impair}} \frac{(i \theta)^n}{n!} - \sum_{n \mbox{ pair}} \frac{(i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \frac{1}{2i} \left(2 * \sum_{n \mbox{ impair}} \frac{(i \theta)^n}{n!}\right)$\\
+$\tab[3.05cm] = \frac{1}{i} \left(\sum_{n \geq 0} \frac{(i \theta)^{2n + 1}}{(2n + 1)!}\right)$\\
+$\tab[3.05cm] = \frac{1}{i} \left(\sum_{n \geq 0} \frac{i^{2n + 1}\theta^{2n + 1}}{(2n + 1)!}\right)$\\
+$\tab[3.05cm] = \frac{1}{i} \sum_{n \geq 0} i\frac{(-1)^{n}\theta^{2n + 1}}{(2n + 1)!}$\\
+$\tab[3.05cm] = \sum_{n \geq 0} \frac{(-1)^{n}\theta^{2n + 1}}{(2n + 1)!}$\\
+Même rayon de convergence que $e(x)$ $R = \infty$, et le domaine de convergence est $\mathbb{R}$\\
+\\
+7) $\cosh(x) =  \frac{e^{x} + e^{-x}}{2} = \frac{1}{2} \left(\sum_{n \geq 0} \frac{x^n}{n!} + \sum_{n \geq 0} \frac{(-x)^n}{n!}\right)$\\
+$\tab[3.55cm] = \frac{1}{2} \left(2 * \sum_{\mbox{n pair}} \frac{x^n}{n!} \right)$\\
+$\tab[3.55cm] = \sum_{n \geq 0} \frac{x^{2n}}{{(2n)}!}$\\
+Même rayon de convergence que $e(x)$ $R = \infty$, et le domaine de convergence est $\mathbb{R}$
+
+\newpage
+\noindent 8) $\cosh(x) =  \frac{e^{x} - e^{-x}}{2} = \frac{1}{2} \left(\sum_{n \geq 0} \frac{x^n}{n!} - \sum_{n \geq 0} \frac{(-x)^n}{n!}\right)$\\
+$\tab[3.55cm] = \frac{1}{2} \left(2 * \sum_{\mbox{n impair}} \frac{x^n}{n!} \right)$\\
+$\tab[3.55cm] = \sum_{n \geq 0} \frac{x^{2n + 1}}{{(2n + 1)}!}$\\
+Même rayon de convergence que $e(x)$ $R = \infty$, et le domaine de convergence est $\mathbb{R}$\\
+\\
+9) $arctan(x)'$ = $\frac{1}{1 + x^2}$\\
+Soit $x \in ]-1, 1[$\\
+On fait un changement de variable $X = -x^2$\\
+$\frac{1}{1 - X} = \sum_{n \geq 0} X^n = \sum_{n \geq 0} (-x^2)^n = \sum_{n \geq 0} (-1)^n x^{2n}$\\
+On a que: $\arctan(x) - \arctan(0) = \int_0^x \sum_{n \geq 0} (-1)^n t^{2n} dt = \sum_{n \geq 0} (-1)^n \frac{1}{2n + 1} x^{2n + 1}$\\
+Donc $\arctan(x) = \sum_{n \geq 0} (-1)^n \frac{x^{2n + 1}}{2n + 1}$\\
+Même rayon de convergence que $\frac{1}{1 - x}$, donc $R = 1$\\
+Étude en $x = 1$\\
+$\sum_{n \geq 0} (-1)^n \frac{1}{2n + 1}$ Converge critère des séries alternées\\
+Étude en $x = -1$\\
+$\sum_{n \geq 0} (-1)^n \frac{(-1)^{2n + 1}}{2n + 1} = \sum_{n \geq 0} (-1)^n \frac{-1}{2n + 1}$ Converge critère des séries alternées\\
+Donc le domaine de convergence est $[-1, 1]$
+\newpage
+\noindent 10)
+$\sin(\theta) = \frac{e^{i \theta} - e^{-i \theta}}{2i}$\\
+$\sin(\theta)^2 = \left(\frac{e^{i \theta} - e^{-i \theta}}{2i}\right)^2$\\
+$\tab[1.15cm] = -\frac{e^{2i\theta} -2e^{i\theta}e^{-i\theta} + e^{-2i\theta}}{4}$\\
+$\tab[1.15cm] = -\frac{e^{2i\theta} + e^{-2i\theta} - 2}{4}$\\
+$\tab[1.15cm] = -\frac{e^{2i\theta} + e^{-2i\theta}}{4} + \frac{1}{2}$\\
+$\tab[1.15cm] = -\frac{1}{2}\left(\cos(2\theta) - 1\right)$\\
+$\tab[1.15cm] = -\frac{1}{2}\left(\sum_{n \geq 0} \frac{(-1)^{n}(2\theta)^{2n}}{(2n)!} - 1\right)$\\
+$\tab[1.15cm] = -\frac{1}{2}\left(\sum_{n \geq 1} \frac{(-1)^{n}(2\theta)^{2n}}{(2n)!}\right)$\\
+\end{document}

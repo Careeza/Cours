@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\scalaire}[2]{\left< #1 | #2\right>}
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+
+\begin{document}
+
+\part*{Exerice 6}
+
+Soit $\lambda$ une valeur propre de $u$ et $x$ la vecteur propre associé\\
+On a donc $u(x) = \lambda x$\\
+Étudions $\scalaire{u(x)}{u(x)}$\\
+D'une part $\scalaire{u(x)}{u(x)} = \scalaire{x}{x}$ car $u$ est une isométrie\\
+D'un autre côté $\scalaire{u(x)}{u(x)} = \scalaire{\lambda x}{\lambda x}$ car x vecteur propre\\
+$\scalaire{\lambda x}{\lambda x} = \lambda^2 \scalaire{x}{x} = \scalaire{x}{x}$\\
+Donc $\lambda = 1$ ou $\lambda = -1$\\
+$u$ est une symétrie orthogonal $\Leftrightarrow$\\
+$\tab Ker(u - Id_E)$ et $Ker(u + Id_E)$ sont des supplémentaires orthogonaux\\
+Comme u est diagonalisable, il existe une base de E dans laquelle la matrice S est diagonale, càd:\\
+$S = \begin{pmatrix}
+    a_1 & 0 & \dots & 0\\
+    0 & \ddots &  & 0\\
+    \vdots &  &  \ddots & \vdots\\
+    0 & \dots & 0 & a_n\\
+\end{pmatrix}$\\
+De plus $Sp(u) \subseteq \{-1, 1\}$, donc:\\
+$S = \begin{pmatrix}
+    1 & 0 & \dots & 0 & 0\\
+    0 & \ddots & & & 0\\
+    \vdots & & -1 & & \vdots\\
+    \vdots & & & \ddots & \vdots\\
+    0 & \dots & 0 & 0 & -1\\
+\end{pmatrix}$\\
+$\begin{matrix}
+    u(e_1) = e_1 & & u(e_{m+1}) = -e_{m + 1}\\
+    u(e_2) = e_2 & & u(e_{m+2}) = -e_{m + 2}\\
+    \vdots  & & \vdots\\
+    u(e_m)  & & u(e_n) = -e_n\\
+\end{matrix}$\\
+Alors: $Ker(u - Id_E)$ = $Vect\{e_1, \dots, e_m\}$\\
+$\tab[1cm] Ker(u + Id_E)$ = $Vect\{e_{m + 1}, \dots, e_n\}$\\
+Clairement $Ker(u - Id_E) \oplus Ker(u + Id_E) = E$\\
+Il reste à montrer qu'ils sont orthogonaux, il suffit de montrer que\\
+$\scalaire{e_i}{e_j} = 0$ \tab $\forall i \in \{1, \dots, m\}, \mbox{ et } \forall j \in \{m + 1, \dots, n\}$\\
+$\scalaire{e_i}{e_j} = \scalaire{u(e_i)}{u(e_j)} = \scalaire{e_i}{-e_j} = -\scalaire{e_i}{e_j}$\\
+$\Rightarrow \scalaire{e_i}{e_j} = 0$
+
+% Donc si u est diagonalisble on a que son polynome est sous la forme $(x - 1)^{\alpha} (x + 1)^{\alpha'}$\\
+% $\alpha$ et $\alpha'$ resp. les multiplicités de 1 et -1\\
+% Soit $B$ une base ou $u$ est diagonal\\ 
+% Donc $Mat_B(u) = \begin{pmatrix}
+%     1 & 0 & 0 & \dots & 0\\
+%     0 & 1 & 0 & \dots & 0\\
+%     \vdots & & & & \vdots\\
+%     \vdots & & & & \vdots\\
+%     0 & \dots & 0 & 0 & -1\\
+% \end{pmatrix}$
+% avec $\alpha$ fois $1$ et $\alpha'$ fois $-1$\\
+% C'est la matrice d'une symétrie\\
+% Or comme u est une isométrie, u est orthogonal, donc c'est une symétrie orthogonal\\
+
+\end{document}

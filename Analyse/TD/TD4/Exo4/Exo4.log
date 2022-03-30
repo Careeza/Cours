@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.3.14)  17 MAR 2022 21:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.3.14)  24 MAR 2022 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -224,13 +224,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--47
 Here is how much of TeX's memory you used:
  2715 strings out of 478583
  45317 string characters out of 2830697
- 351918 words of memory out of 3000000
+ 352918 words of memory out of 3000000
  20894 multiletter control sequences out of 15000+600000
  471872 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,62p,300b,111s stack positions out of 10000i,1000n,20000p,200000b,80000s
 </Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Exo4.pdf (2 pages, 105373 bytes).
+Output written on Exo4.pdf (2 pages, 105742 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

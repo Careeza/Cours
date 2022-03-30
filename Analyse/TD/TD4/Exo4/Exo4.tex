@@ -49,7 +49,10 @@ Donc $S(x) = -ln(3 - x) + ln(3) = -(ln(3 - x) - ln(3)) = -ln(\frac{3 - x}{3})$\\
 $= \sum_{n\geq 0} \frac{n + 1 + 1}{n + 1}x^n$
 $= \sum_{n\geq 0} (\frac{1}{n + 1} + 1)x^n $
 $= \sum_{n\geq 0} \frac{1}{n + 1}x^n  +\sum_{n\geq 0} x^n$\\
-$\tab[2.35cm] = \sum_{n\geq 0} \frac{1}{n + 1}x^n  + \frac{1}{1-x}$
+$\tab[2.35cm] = \sum_{n\geq 0} \frac{1}{n + 1}x^n  + \frac{1}{1-x}$\\
+Si $x \neq 0$\\ 
+$\tab[2.35cm] = \frac{1}{x}\sum_{n\geq 0} \frac{1}{n + 1}x^{n +1}  + \frac{1}{1-x}$\\
+$\tab[2.35cm] = -\frac{1}{x} ln(1 - x)  + \frac{1}{1-x}$
 
 
 \end{document}

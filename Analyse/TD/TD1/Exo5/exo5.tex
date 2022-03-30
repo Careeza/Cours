@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\NewDocumentCommand{\mylim}{ O{n} O{\infty}}{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\NewDocumentCommand{\mynlim}{ O{n} O{\infty}}{\underset{#1 \rightarrow #2}{\nrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{Sup}}
+
+\begin{document}
+
+\part*{Exerice 5}
+
+Soit $(f_n)_{n\geq 1}$ une suite de fonctions qui converge uniformement sur [0, 1] vers
+une fonction f continue.\\
+$\bullet$ $|f_n(\frac{1}{n}) - f(0)|$
+$= |f_n(\frac{1}{n}) - f(\frac{1}{n}) + f(\frac{1}{n}) - f(0)|$\vspace{2mm}\\
+$\tab[2.6cm] \leq |f_n(\frac{1}{n}) - f(\frac{1}{n})| + |f(\frac{1}{n}) - f(0)|$\vspace{2mm}\\
+$\tab[2.6cm] \leq \mysupp{[0, 1]} |f_n(x) - f(x)| + |f(\frac{1}{n}) - f(0)|$\vspace{2mm}\\
+$\bullet$ On sait que $(f_n)$ converge uniformement sur [0, 1] donc on a que $\mysupp{[0, 1]} |f_n(x) - f(x)| \mylim 0$
+Comme f est continue sur [0, 1] f est continue en 0\\
+Donc on a que $|f(\frac{1}{n}) - f(0)| \mylim 0$\\
+Comme $|f_n(\frac{1}{n}) - f(0)| \leq \underset{\mylim 0}{\underbrace{\mysupp{[0, 1]} |f_n(x) - f(x)|}} + \underset{\mylim 0}{\underbrace{|f(\frac{1}{n}) - f(0)|}} \mylim 0$
+alors $|f_n(\frac{1}{n}) - f(0)| \mylim 0$ donc on a bien que $f_n(\frac{1}{n}) \mylim f(0)$\\
+$\bullet$ $f_n : x \longmapsto nxe^{-nxln^2(1 + x)}$\\
+Soit $x \in [0, 1]$\\
+Si x = 0, $f_n(0) = 0$\\
+Si $x \in ]0, 1]$, $-nxln^2(1 + x) \mylim -\infty$, donc $e^{-nxln^2(1 + x)} \mylim 0$\\
+Et par croissance comparé on a $nxe^{-nxln^2(1 + x)} \mylim 0$\\
+Donc $f_n$ converge simplement vers la fonction nulle\\
+On a vu a la question précédente que si on avait convergence uniforme vers [0, 1]\\
+alors $f_n(\frac{1}{n}) \mylim f(0)$\\
+Or $f_n(\frac{1}{n}) = n * \frac{1}{n} exp(-n \frac{1}{n} ln(1 + \frac{1}{n}))$\\
+$\tab[1.6cm] = exp(-ln(1 + \frac{1}{n}))$\\
+$\frac{1}{n} \mylim 0$ donc on peut faire un DL en 0 de $ln(1 + x)$\\
+$\tab[1.6cm] = exp(-(\frac{1}{n} + o(\frac{1}{n}))) \mylim 1$\\
+Or $f(0) = 0 \neq 1$ donc $f_n(\frac{1}{n}) \mynlim f(0)$
+
+
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\scalaire}[2]{\left< #1 | #2\right>}
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+
+\begin{document}
+
+\part*{Exerice 8}
+
+E espace euclidien\\
+F - sev  de E\\
+$s \circ s(x) = s(s(x))$\\
+$\tab[1.25cm] =s(2P_F(x) - x)$\\
+$\tab[1.25cm] =2s(P_F(x)) - s(x)$\\
+or $P_F(x) \in F$ donc $s(P_F(x)) = P_F(x)$\\
+$s \circ s(x) = 2P_F(x) - s(x)$\\
+$\tab[1.25cm] = 2P_F(x) - (2P_F(x) - x)$\\
+$\tab[1.25cm] = x$\\
+On a bien $s \circ s = Id_3$\\
+Comme s est une isométrie, il existe une base orthonormée dans laquelle la matrice associée S est orthogonale\\
+Càd $SS^T = S^TS = I$\\
+Comme $s \circ s = Id$, on a $S^2 = I$\\
+En conclusion $S = S^T$, càd S-symétrique\\
+Soit s-isométrie dans une base ON la matrice M de s est orthogonale et symétrique. Comme M est 
+symétrique, elle est diagonalisable, donc par Ex 3.6, s'est une symétrie orthogonale\\
+\underline{Remarque} Si u-isométrie, alors u est une symétrie orthogonale $\Leftrightarrow$ $u \circ u = Id$
+
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 12}
+
+Un laboratoire a mis au point un alcootest dont les propriétés sont les suivantes :
+\begin{itemize}
+    \item il se révèle positif pour quelqu'un qui n'est pas en état d'ébriété dans 2\% des cas
+    \item il se révèle positif pour quelqu'un qui est en état d'ébriété dans 96\% des cas.
+\end{itemize}
+Dans un département donné, on estime que 3\% des conducteurs sont en état d'ébriété.\\
+Soit A = conducteurs en état d'ébriété\\
+$A^c$ = conducteurs n'est pas en état d'ébriété\\
+P = alcootest positif\\
+N = alcootest négatif
+\begin{enumerate}
+    \item On cherche $P(A^c|P) = \frac{P(A^c \cap P)}{P(P)}$\\
+    On sait que $P(A^c \cap P) = P(P|A^c)P(A^c) = \frac{2}{100} * \frac{97}{100} = \frac{194}{10000}$\\
+    On a $P(P) = P(P|A)P(A) + P(P|A^c)P(A^c)$\\
+    $\tab[1.8cm] = \frac{96}{100} * \frac{3}{100} + \frac{2}{100} * \frac{97}{100} = \frac{482}{10000}$\\
+    Donc $P(A^c|P) = \frac{194}{10000} * \frac{10000}{482} = \frac{194}{482}$
+    \item On cherche $P(A^c|N) =  \frac{P(N \cap A^c)}{P(N)}$\\
+    On a que $P(N \cap A^c) = P(N|A^c) P(A^c) = \frac{98}{100} * \frac{97}{100} = \frac{9506}{10000}$\\
+    Et $P(N) = 1 - P(P) = 1 - \frac{482}{10000} = \frac{9518}{10000}$\\ 
+    Donc $P(N | A) = \frac{9506}{10000} * \frac{10000}{9518} = \frac{9506}{9518} \approx 99.8\%$
+
+\end{enumerate}
+
+\end{document}

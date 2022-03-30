@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+% \color{red}
+
+\begin{document}
+
+\part*{Exerice 4}
+
+$\Omega = \{(x_1, \dots, x_p) \in \{1, \dots, N\} \mbox{ tq } \forall i \neq j, \mbox{ alors } x_i \neq x_j\}$\\
+$\omega = (\omega_1, \dots, \omega_p) \in \Omega$\\
+$X : \Omega \rightarrow \{0, \dots, n\}$\\
+$\omega \mapsto \sum_{k = 1}^p  \left\{
+    \begin{array}{ll}
+        1 \mbox{ si } \omega_k \leq n\}\\
+        0 \mbox{ sinon }\\
+    \end{array}
+\right.$\\
+\\
+$\forall k \in \{0, \dots, \min(n, p)\}$\\
+$\mathbb{P}(X = k) = \frac{\begin{pmatrix}
+    n\\
+    k\\
+\end{pmatrix} \begin{pmatrix}
+    N - n\\
+    p - k\\
+\end{pmatrix}}{\begin{pmatrix}
+    N\\
+    p\\
+\end{pmatrix}}$\\
+Loi hypergéometrique de paramtètre $p, N, n$
+
+\end{document}

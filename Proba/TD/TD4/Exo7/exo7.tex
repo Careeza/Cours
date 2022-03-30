@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+% \color{red}
+
+\begin{document}
+
+\part*{Exerice 7}
+
+1) $\mathbb{P}(\{|X| \leq 1\}) = \mathbb{P(X} = -1) + P(X = 0) + P(X = 1)$\\
+$\tab[2.1cm] = \frac{4}{13} + \frac{1}{13} + \frac{2}{13} = \frac{7}{13}$\\
+2) $E[X] = \sum_{k = -3}^1 k \mathbb{P}(X = k)$\\
+$\tab[1.3cm] = -3 \frac{3}{13} + -2 \frac{3}{13} + -1 \frac{4}{13} + 1 \frac{2}{13}$\vspace{3mm}\\
+$\tab[1.3cm] = \frac{-9}{13} + \frac{-6}{13} + \frac{-4}{13} + \frac{2}{13}$\vspace{3mm}\\
+$\tab[1.3cm] = \frac{-17}{13}$\\
+\\
+$Var(X) = E[X^2] - E[X]^2$\\
+$E[X^2] = 9\frac{3}{13} + 4 \frac{3}{13} + 1 \frac{4}{13} + 1 \frac{2}{13} \vspace{3mm}$\\
+$\tab[1.05cm] = \frac{45}{13}$\\
+Donc $Var(X) = E[X^2] - E[X]^2 = \frac{45}{13} - \left(\frac{17}{13}\right)^2 = \frac{296}{169}$\\
+\end{document}

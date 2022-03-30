@@ -31,8 +31,7 @@ Donc $P(A_0) = \begin{pmatrix}
 Et $P(A_1) = \begin{pmatrix}
     n\\
     1\\
-\end{pmatrix} (\frac{1}{6})^1 + (\frac{5}{6})^{n - 1} = \frac{n}{6} * (\frac{5}{6})^{n - k}$\\
-
+\end{pmatrix} (\frac{1}{6})^1 + (\frac{5}{6})^{n - 1} = \frac{n}{6} * (\frac{5}{6})^{n - 1}$\\
 $\bullet$ $B_1$ est le complémentaire de $A_0$, car si obtient pas exactement 0 fois le chiffre 6
 alors on a obtenu au moins un 6\\
 $P(B_1) = 1 - P(A_0) = 1 - (\frac{5}{6})^n$\\
@@ -42,7 +41,7 @@ $B_2$ est le complémentaire de $A_{1p}$, car si obtient pas au plus 1 fois le c
 $P(B_2) = P(A_{1p}^c) = 1 - P(A_{1p}) = 1 - P(A_0 \cup A_1)$\\
 Or $A_0$ et $A_1$ sont des événement disjoints\\
 $P(B_2) = 1 - (P(A_0) + P(A_1))$\\
-$\tab = 1 - P(A_0) - P(A_1) = 1 - (\frac{5}{6})^n - \frac{n}{6} * (\frac{5}{6})^{n - k}$\\
+$\tab = 1 - P(A_0) - P(A_1) = 1 - (\frac{5}{6})^n - \frac{n}{6} * (\frac{5}{6})^{n - 1}$\\
 $\bullet$ On a déjà calculé la formule générale pour $A_k$\\
 $P(A_k) = \begin{pmatrix}
     n\\
@@ -50,8 +49,12 @@ $P(A_k) = \begin{pmatrix}
 \end{pmatrix} (\frac{1}{6})^k * (\frac{5}{6})^{n - k}$\\
 \newpage
 \noindent $\bullet$ Soit $A_{kp}$ l'événement on a obtenu au plus k fois le chiffre 6\\
-$A_{kp} = \cup_{i=0}^{k} A_k$\\
-$P(B_k) = P((A_{k - 1})^c) = 1 - P(A_{k - 1})  = 1 - P(\cup_{i=0}^{k-1} A_k)$\\
+$A_{kp} = \cup_{i=0}^{k} A_i$\\
+$P(B_k) = P((A_{(k - 1)p})^c) = 1 - P(A_{(k - 1)p})  = 1 - P(\cup_{i=0}^{k-1} (A_i))$\\
 Or tous les événements $A_k$ sont disjoints\\
-Donc $P(B_k) = 1 - \sum_{i=0}^{k-1} P(A_k)$\\
+Donc $P(B_k) = 1 - \sum_{i=0}^{k-1} P(A_i)$\\
+$\tab[2cm] = 1 - \sum_{i=0}^{k-1} \begin{pmatrix}
+    n\\
+    i\\
+\end{pmatrix} (\frac{1}{6})^i (\frac{5}{6})^{n - i}$
 \end{document}

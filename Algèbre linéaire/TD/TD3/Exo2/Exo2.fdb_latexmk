@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1647420112 "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/TD/TD3/Exo2/Exo2.tex" "Exo2.pdf" "Exo2" 1647420112
-  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1647390509 81086 6fddea6b023469843de28035c851ec71 ""
+["pdflatex"] 1647935133 "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/TD/TD3/Exo2/Exo2.tex" "Exo2.pdf" "Exo2" 1647935133
+  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1647866668 81086 6fddea6b023469843de28035c851ec71 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1646148019 11548 80c1ff8ab796ef73793732f9a4726740 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1647256762 10260652 8a9e2f8cb8067a9c27ba5fa12acbbc8a ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1646147466 1436 c7f957a372ef2fbe93c0982f96625e12 ""
@@ -48,9 +48,9 @@
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1646147466 4009 187ea2dc3194cd5a76cd99a8d7a6c4d0 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1646147468 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/setspace/setspace.sty" 1646166360 22913 a27d7908fc6f0385466454a966a316eb ""
-  "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/TD/TD3/Exo2/Exo2.tex" 1647420112 5234 40c28f0306a0e59f59cb34a17f2f6ca2 ""
-  "Exo2.aux" 1647420112 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "Exo2.tex" 1647420112 5234 40c28f0306a0e59f59cb34a17f2f6ca2 ""
+  "/Users/fredericbecerril/projet/Cours/Algèbre linéaire/TD/TD3/Exo2/Exo2.tex" 1647935132 5235 bd5fe4dc00cf3f68b5cff0678d388b2b ""
+  "Exo2.aux" 1647935133 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "Exo2.tex" 1647935132 5235 bd5fe4dc00cf3f68b5cff0678d388b2b ""
   (generated)
   "Exo2.aux"
   "Exo2.log"

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1647853417 "/Users/fredericbecerril/projet/Cours/Proba/TD/TD1/Exo1/Exo1.tex" "Exo1.pdf" "Exo1" 1647853418
+["pdflatex"] 1647853546 "/Users/fredericbecerril/projet/Cours/Proba/TD/TD1/Exo1/exo1.tex" "exo1.pdf" "exo1" 1647853547
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1647390509 81086 6fddea6b023469843de28035c851ec71 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1647256762 10260652 8a9e2f8cb8067a9c27ba5fa12acbbc8a ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1646147450 1004 54797486969f23fa377b128694d548df ""
@@ -13,7 +13,6 @@
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr17.tfm" 1646147465 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1646147450 32080 340ef9bf63678554ee606688e7b5339d ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1646147450 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1646147450 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1646147450 36281 c355509802a035cadc5f15869451dcee ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1646147450 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1646147450 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -43,10 +42,10 @@
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1646147466 4009 187ea2dc3194cd5a76cd99a8d7a6c4d0 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1646147468 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/setspace/setspace.sty" 1646166360 22913 a27d7908fc6f0385466454a966a316eb ""
-  "/Users/fredericbecerril/projet/Cours/Proba/TD/TD1/Exo1/Exo1.tex" 1647853417 2167 9766da4bb35b47eeffa75dff405920c3 ""
-  "Exo1.aux" 1647853418 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "Exo1.tex" 1647853417 2167 9766da4bb35b47eeffa75dff405920c3 ""
+  "/Users/fredericbecerril/projet/Cours/Proba/TD/TD1/Exo1/exo1.tex" 1647853546 1853 6e574d33a215bcf6dd4529009dbea49b ""
+  "exo1.aux" 1647853546 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "exo1.tex" 1647853546 1853 6e574d33a215bcf6dd4529009dbea49b ""
   (generated)
-  "Exo1.aux"
-  "Exo1.log"
-  "Exo1.pdf"
+  "exo1.aux"
+  "exo1.log"
+  "exo1.pdf"

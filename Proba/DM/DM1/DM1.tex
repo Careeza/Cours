@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\part*{DM 1}
+
+\begin{enumerate}
+    \item Pour chaque tirage de boule on a 5 possibilitées et on tire 3 fois sans remise. Donc le nombre tirage possible est de $Card(\{1, 2, 3, 4 ,5\}^3) = Card(\{1, 2, 3, 4, 5\})^3 = 5^3 = 125$
+    \item $(\{3\} \times \{1, 2, 3, 4 ,5\}^2) \cup (\{1, 2, 3, 4 ,5\} \times \{3\} \times \{1, 2, 3, 4 ,5\}) \cup (\{3\} \times \{1, 2, 3, 4 ,5\}^2)$
+    \item On tire les trois boules simultanément donc on fait une partition de cardinal 3 de notre ensemble de boule de cardinal 5 donc il y a $\begin{pmatrix}
+        5\\
+        3\\
+    \end{pmatrix}$ tirage possible, $\begin{pmatrix}
+        5\\
+        3\\
+    \end{pmatrix} = 10$
+    \item Si on considère que le tirage contient un 3, il nous faut regarder combien de partie il reste. Il nous faut tirer 2 boules simultanément dans un sac de 4 boules.\\
+$Card(\{A \in P(E) | Card(A) = 3 \mbox{ et } 3 \in A\})$\\
+=$Card(\{A \in P(E \backslash \{3\}) | Card(A) = 2\})$\\
+=$\begin{pmatrix}
+    4\\
+    2\\
+\end{pmatrix} = 6$
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+% \color{red}
+
+\begin{document}
+
+\part*{Exerice 2}
+
+N lancers successifs d'une pièce déséquilibré. $\Omega = \{0, 1\}^N$\\
+$(\omega_1, \dots, \omega_N) \in \{0, 1\}^N$\\
+$P((\hbrace{\mbox{que des 0}}{0, \dots, 0})) = (1-p)^N$\\
+$P((\hbrace{\mbox{que des 1}}{1, \dots, 1})) = p^N$\\
+$P((1, \hbrace{\mbox{que des 0}}{0, \dots, 0})) = p (1-p)^{N -1}$\\
+$P((\omega_1, \dots, \omega_N)) = p^{\fbox{$k$}}(1-p)^{\fbox{$N-k$}\mbox{||nombre de 0}}$, si k = $\sum_{i=1}^N \omega_i$\\
+On regarde la somme:\\
+$\tab[2cm] X:\Omega \rightarrow \{0, \dots, N\}$\\
+$\tab \omega = (\omega_1, \dots, \omega_N) \mapsto \omega_1 + \dots + \omega_N$\\
+$P(X = k) = P(\{\omega : \omega_1 + \dots + \omega_N = k\})$\\
+$\tab[1.65cm] = \sum_{\omega_1 + \dots + \omega_N = k} P(w) = \sum_{\omega_1 + \dots + \omega_N = k} p^k(1-p)^{N-k}$ k = le nombre de succès \vspace{3mm}\\
+$\tab[4.7cm] = \begin{pmatrix}
+    N\\
+    k\\
+\end{pmatrix}  p^k(1-p)^{N-k}$\\
+C'est la loi binomial BIN(N, P)\\
+N = nombre de lancers\\
+P = proba de succès\\
+\important{NB:} si $p = \frac{1}{2}$, P uniforme sur $\{0, 1\}^N$ et alors $P(X = k) = \begin{pmatrix}
+    N\\
+    k\\
+\end{pmatrix}2^{-N}$
+
+\end{document}

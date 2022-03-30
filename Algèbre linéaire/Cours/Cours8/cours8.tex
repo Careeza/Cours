@@ -1,0 +1,196 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\section{Isométrie en dim 2}
+
+E euclidien de dim $E=2$ par exemple
+
+\subsection{Orientation du plan }
+
+Dans le plan une BON $(\vec{i}, \vec{j})$ est directe si l'angle orienté $\widehat{(\vec{i}, \vec{j})} = +\frac{\pi}{2}$ BOND
+
+\paragraph{\underline{Propriété}}:
+Si $\mathcal{B}_0 = ((\vec{i}, \vec{j}))$ BOND\\
+$\mathcal{B} = (\vec{u}, \vec{v})$ BOND ssi $Mat_{\mathcal{B}_0} (\vec{u}, \vec{v}) \in SO(2)$\\
+$\vec{u} = cos \theta \vec{i} + sin \theta \vec{j}$\\
+$\vec{v} = -sin \theta \vec{i} + cos \theta \vec{j}$ \vspace*{2mm}\\
+P = $\begin{pmatrix}
+    cos \theta & -sin \theta\\
+    sin \theta & cos \theta\\
+\end{pmatrix}$
+%include graph
+\paragraph{\underline{Définition}}: Si E un espace euclidien. Alors, on oriente l'espace en choisissant une BON $\mathcal{B}_0$ qu'on définit comme directe.\\
+Une BON $\mathcal{B}$ est directe (resp. indirecte) si $Mat_{\mathcal{B}_0} B \in SO(n)$ (resp $\in O(n) \backslash SO(n))$\\
+$\mathbb{R}^2$ $\mathcal{B}_0 \begin{pmatrix}
+    1\\
+    0\\
+\end{pmatrix}, \begin{pmatrix}
+    0\\
+    1\\
+\end{pmatrix}$\\
+$\mathbb{R}^n$ $\mathcal{B}_0 \begin{pmatrix}
+    1\\
+    0\\
+    \vdots\\
+    0\\
+    0\\
+\end{pmatrix}, \begin{pmatrix}
+    0\\
+    1\\
+    0\\
+    \vdots\\
+    0\\
+\end{pmatrix}, \dots \begin{pmatrix}
+    0\\
+    0\\
+    0\\
+    \vdots\\
+    1\\
+\end{pmatrix}$\\
+Dans l'espace on verra.
+
+\subsection{\underline{Description de O(2)}}
+
+\paragraph{\underline{Théorème}}: Si $P \in O(2)$, P s'écrit\\
+$\begin{pmatrix}
+    a & -b\\
+    b & a\\
+\end{pmatrix}$ avec $a^2 + b^2 = 1$ si $P \in SO(2)$\\
+$\begin{pmatrix}
+    a & b\\
+    b & -a\\
+\end{pmatrix}$ avec $a^2 + b^2 = 1$ sinon\\
+
+\paragraph{\underline{Preuve:}}
+Si P = $\begin{pmatrix}
+    a & c\\
+    b & d\\
+\end{pmatrix} \in O(2)\\
+\tab \Leftrightarrow \left\{
+    \begin{array}{ll}
+        a^2 + b^2 = 1\\
+        c^2 + d^2 = 1\\
+        dc + bd = 0\\
+    \end{array}    
+\right.$\vspace*{3mm}\\
+$\tab \Leftrightarrow \exists \alpha, \beta \in \mathbb{R}$\\
+$\tab$ tq $a = cos(\alpha)$ \tab $b = sin(\alpha)$\\
+$\tab$ tq $c = cos(\beta)$ \tab $b = sin(\beta)$\\
+$cos(\alpha)cos(\beta) + sin(\alpha)sin(\beta) = cos(\alpha - \beta) = 0$\\
+$\Leftrightarrow$ P = $\begin{pmatrix}
+    cos \alpha & cos \beta\\
+    sin \alpha & sin \beta\\
+\end{pmatrix}$\\ et $\alpha - \beta = \frac{\pi}{2} [\pi]$\\
+$\Leftrightarrow$ P = $\begin{pmatrix}
+    cos \alpha & cos \beta\\
+    sin \alpha & sin \beta\\
+\end{pmatrix}$\\ et $\beta = \alpha - \frac{\pi}{2} [\pi]$\\
+$\beta = \alpha + \frac{\pi}{2} [2\pi]$ ou $\beta = \alpha - \frac{\pi}{2} [2\pi]$\\
+$P \in O(2) \Leftrightarrow P = \begin{pmatrix}
+    cos \alpha & -sin \alpha\\
+    sin \alpha & cos \alpha\\
+\end{pmatrix}_{det=1}$ ou $\begin{pmatrix}
+    cos \alpha & sin \alpha\\
+    sin \alpha & -cos \alpha
+\end{pmatrix}_{det = -1}$
+
+\subsection{\underline{Classification en dimension 2}}
+
+\paragraph{\underline{Théorème}}: Soit E euclidien de dim 2 et $f \in O(E)$, $\mathcal{B}$ une BOND
+\begin{enumerate}
+    \item $f \in SO(E) \Leftrightarrow \exists \theta \in \mathbb{R}$ tq\\
+$Mat_{\mathcal{B}} f = \begin{pmatrix}
+    cos \theta & -sin \theta\\
+    sin \theta & cos \theta\\
+\end{pmatrix} = R_\theta$
+Dans ce cas f est une "rotation d'angle $\theta$ et si $f \neq Id_E$ et $f \neq -Id_E$ f n'a pas de vap réelle
+    \item $f \in O(E) \backslash SO(E) \Leftrightarrow \theta \in \mathbb{R}$ tq\\
+    $Mat_{\mathcal{B}} f = \begin{pmatrix}
+        cos \theta & sin \theta\\
+        sin \theta & -cos \theta\\
+\end{pmatrix}$\\
+Donc dans ce cas f est une réflexion par rapport à la droite vectorielle $D = Ker(f - Id_E)$\\
+De plus il existe une BOND $\mathcal{B}'$ dans laquelle $Mat_{\mathcal{B}'} f = \begin{pmatrix}
+    1 & 0\\
+    0 & -1\\
+\end{pmatrix}$
+\end{enumerate}
+
+\begin{enumerate}
+    \item $Mat_{\mathcal{B}} f = \begin{pmatrix}
+    cos \theta & -sin \theta\\
+    sin \theta & cos \theta\\
+\end{pmatrix}$\\
+$\chi_f(x) = \left| \begin{matrix}
+        x - cos \theta & sin \theta\\
+        -sin \theta & X - cos \theta\\
+    \end{matrix}
+\right|$\\
+$\tab = X^2 -2X cos \theta + cos^2 \theta + sin^2 \theta$\\
+$\tab = X^2 -2X cos \theta + 1$\\
+$\tab = (X - e^{i\theta})(X - e^{-i \theta})$\\
+Donc X est valeur propre réelle ssi $e^{i\theta} \in \mathbb{R}$
+\end{enumerate}
+
+$P = \begin{pmatrix}
+    cos \theta & sin \theta\\
+    sin \theta & -cos \theta\\
+\end{pmatrix}$\\
+det $(X I_2 - P) = \left|
+    \begin{matrix}
+        X - cos \theta & \sin \theta\\
+        -sin \theta & X + cos \theta\\
+    \end{matrix}
+\right|$ = $X^2 -1$\\
+$E = Ker(f - Id_E) \oplus Ker (f + Id_E)$\\
+De plus il existe une BOND $\mathcal{B}'$ dans laquelle $Mat_{\mathcal{B}'} f = \begin{pmatrix}
+    1 & 0\\
+    0 & -1\\
+\end{pmatrix}$
+
+\subsection{\underline{Compléments}}
+
+\begin{itemize}
+    \item SO(2) = $\{\alpha \in \mathbb{R} | R_{\alpha}\}$
+    \item $R_{\alpha} R_{\beta} = R_{\alpha + \beta} = R_{\beta} R_{\alpha}$
+    \item $R_0 = I_2$
+    \item Si $f \in SO(E)$ $\mathcal{B}$, $\mathcal{B}'$ BOND\\
+Alors $R_{\theta} = Mat_{\mathcal{B}} f = Mat_{\mathcal{B}'} f = R_{\theta}'$ (*)
+\end{itemize}
+(*) La matrice de passage d'une BOND a une autre est dans SO(E) donc\\
+$P^{-1} R_{\theta} P = R_{\theta'}$\\
+$R_{-\alpha} R_{\theta} R_{\alpha} = R_{\theta'}$\\
+$R_{-\alpha} R_{\alpha} R_{\theta} = R_{\theta'}$\\
+$R_{\theta} = R_{\theta'}$\\
+\\
+$f \in O(E) \backslash SO(E)$\\
+P = $\begin{pmatrix}
+    cos \theta & sin \theta\\
+    sin \theta & -cos \theta\\
+\end{pmatrix}$\\
+D = $Ker(f - Id_E)$\\
+Soit $u_{\alpha} = cos (\alpha) \vec{i} + sin (\alpha) \vec{j}$\\
+$(P - I_2) \cdot \begin{pmatrix}
+    cos \alpha\\
+    sin \alpha\\
+\end{pmatrix}$\\
+$P \begin{pmatrix}
+cos (\alpha)\\
+sin (\alpha)\\
+\end{pmatrix}$
+%Faire la suite
+
+\end{document}

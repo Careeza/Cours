@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\NewDocumentCommand{\mylim}{ O{n} O{\infty}}{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\NewDocumentCommand{\mynlim}{ O{n} O{\infty}}{\underset{#1 \rightarrow #2}{\nrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{Sup}}
+
+\begin{document}
+
+\part*{Exerice 1}
+
+$u_n : [0, \infty[ \ni x \longmapsto \frac{arctan(nx)}{n^2}$, $n \geq 1$\\
+Pour montrer que $\sum_{n \geq 1} u_n$ converge normalement il faut montrer que:\\
+$\sum_{n \geq 1} \mysupp{\mathbb{R}_+} |u_n|$ converge, or on a que $0 < arctan(x)$ $\nearrow$ $\frac{\pi}{2}$\\
+Donc $\mysupp{\mathbb{R}_+} |u_n| = \frac{\pi}{2n^2}$\\
+Or $\sum_{n \geq 1} \frac{\pi}{n^2}$ converge d'après Riemann, donc $\sum_{n \geq 1} u_n$ converge normalement\\
+$(u_n)' = n\frac{1}{1 + n^2x^2} * \frac{1}{n^2} = \frac{1}{n + n^3x^2}$\\
+Soit $a > 0$
+On a que $0 < (u_n)'$ décroissant sur $\mathbb{R}_+$\\
+Donc $\mysupp{[a, \infty[} |(u_n)'| = (u_n)'(a) = \frac{1}{n + a^2n^3} \mysim{n}{\infty} \frac{1}{a^2n^3}$\\
+$\sum_{n\geq 1} \mysupp{[a, \infty[} |(u_n)'|$ a le même comportement que $\sum_{n\geq 1} \frac{1}{a^2n^3}$\\
+Or d'après Riemann cette série converge, donc $(u_n)'$ converge normalement sur $[0, \infty[$\\
+Soit $S = \sum_{n \geq 1} u_n$\\
+On a: $\left\{
+    \begin{array}{ll}
+        \mbox{S converge normalement sur } \mathbb{R}_+\\
+        u_n \in C^0 \mbox{ sur } \mathbb{R}_+\\
+    \end{array}
+\right. \Rightarrow S$ est de la classe $C^0$ sur $\mathbb{R}_+$
+
+On a: $\left\{
+    \begin{array}{ll}
+        \mbox{S converge simplement sur } [a, +\infty[\\
+        \mbox{S' converge normalement sur } [a, +\infty[\\
+        u_n \in C^1 \mbox{ sur } [a, +\infty[\\
+    \end{array}
+\right. \Rightarrow S$ est de la classe $C^1$ sur $[a, +\infty[$\\
+Comme S est de classe $C^1$ sur tout intervalle $[a, +\infty[$ on a que S est de classe $C^1$ sur $]0, +\infty[$
+
+\end{document}

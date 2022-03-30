@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{\sup}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 9}
+
+Soit $R > 0$\\
+$P_n : x \mapsto \sum_{k = 0}^{n} \frac{x^k}{k!}$\\
+\\
+On sait que $\underset{n \rightarrow \infty}{\lim} P_n$ est la série entière de $e^x$ qui a pour Rayon de convergence $R = +\infty$\\
+Donc $P_n$ converge uniformément sur $\mathbb{R}$ vers la fonction $e^x$\\
+On a donc que $\exists n_R \in \mathbb{N}$ tq pour tout les entiers $n \geq n_R$, les fonctions $P_n - e$ soit bornée sur [-R, R]\\
+Càd: soit $\epsilon = \exp\left(\frac{-R}{2}\right) > 0$ on a que $\exists n_R \in \mathbb{N}, \forall n \geq n_R$ on a $||P_n - e||_{\infty, [-R, R]} < \epsilon$\\
+Or $e$ est strictement croissant sur $\mathbb{R}$, donc $\forall x \in [-R, R]$, $e^x \geq e^{-R}$\\
+$\epsilon > ||P_n - e||_{\infty} \geq ||P_n - e^{-R}||_{\infty}$\\
+$\Rightarrow \forall x \in [-R, R]$ on a que $|P_n(x) - e^{-R}| < \epsilon$\\
+$\Rightarrow$ $e^{-R} - \epsilon < P_n(x) < e^{-R} + \epsilon$\\
+$\Rightarrow$ $e^{-R} - e^{-R/2} < P_n(x) < e^{-R} + e^{-R/2}$\\
+Or $e^{-R} - e^{-R/2} > 0$, donc:\\
+$\Rightarrow$ $0 < P_n(x) < e^{-R} + e^{-R/2}$\\
+Donc $P_n(x)$ n'admet pas de racine réelle sur $[-R, R]$ $\forall n \geq n_R$ 
+\end{document}

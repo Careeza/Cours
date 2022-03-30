@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+\newcommand{\mysupp}[1]{\underset{x \in #1}{\sup}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 5}
+
+$f(x) = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^{2n  + 1}}{n(2n + 1)}$\\
+Le rayon de convergence $R = \mysupp{\mathbb{R}} \left\{x \in \mathbb{R} \mbox{ tq converge }\sum |a_n|x^n \right\}$\\
+$a_n = \left\{
+    \begin{array}{ll}
+        0 \mbox{ si k = 2n}\\
+        \frac{(-1)^{n + 1}}{n(2n + 1)} \mbox{ sinon}\\
+    \end{array}
+\right.$\\
+Donc $ \mysupp{\mathbb{R}} \left\{x \in \mathbb{R} \mbox{ tq converge }\sum |a_n|x^n \right\} =  \mysupp{\mathbb{R}} \left\{x \in \mathbb{R} \mbox{ tq converge }\sum \frac{1}{n(2n + 1)}x^n \right\}$\\
+Si $x = 1$ on $a_n x^n = \frac{1}{n(2n + 1)} \mylim{n}{\infty} 0$ et donc $\sum |a_n|$ converge par Riemann\\
+Si $x < 1$ donc $a_n x^n \leq a_n$, et $\sum |a_n|$ converge par Riemann\\
+Si $x > 1$ on $x^n \mylim{n}{\infty} \infty$, Et par croissance comparé $|a_n|x^n \mylim{n}{\infty} \infty$ donc $\sum |a_n|x^n$ diverge\\
+Donc R = 1\\
+Étudions $f(1)$ et $f(-1)$ pour connaitre le domaine de convergence\\
+$f(1) = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n(2n + 1)}$ converge absolument d'après Riemann\\
+$f(-1) = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{(-1)^{2n+1}}{n(2n + 1)}$ converge absolument d'après Riemann\\
+Donc le domaine de convergence est $[-1, 1]$\\
+$f(x)$ est une séries entière, et une séries entière est $C^\infty$ sur $]-R, R[$\\
+$f'(x) = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{(2n + 1)x^{2n}}{n(2n + 1)} = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^{2n}}{n}$ = $\ln(1 + x^2)$\\
+$f(x) - f(0) = \int_0^x f'(t) dt = \int_0^x ln(1 + t^2) dt$\\ 
+$\int_0^x ln(1 + t^2)dt = \int_0^x 1 * ln(1 + t^2) + \frac{t}{t^2 + 1} - \frac{t}{t^2 + 1}dt$\\
+$\tab[2.5cm] = \left[tln(1 + t^2)\right]^x_0 - \int_0^x \frac{2t^2}{t^2 + 1} dt$\\
+Étudions $\int_0^x \frac{2t^2}{t^2 + 1} dt = 2\int_0^x \frac{t^2}{t^2 + 1} = 2\int_0^x 1 - \frac{1}{t^2 + 1}dt$\\
+$\tab = 2\left(\int_0^x 1 - \int_0^x \frac{1}{t^2 + 1}\right)$\\
+$\tab = 2\left([t]_0^x - [arctan(t)]_0^x\right)$\\
+$\tab = 2x - 2arctan(x)$\\
+Donc $\int_0^x ln(1 + t^2)dt = xln(1 + x^2) + 2arctan(x) -2x$
+\newpage
+\noindent $f_n(x) = (-1)^{n+1} \frac{x^{2n  + 1}}{n(2n + 1)}$\\
+$\sum_{n \geq 1} f_n$ converge normalement sur $[-R, R]$ ssi $\sum_{n \geq 1} \mysupp{[-R, R]}|f_n(x)|$ CV\\
+$|f_n(x)| = \frac{|x^{2n+1}|}{n(2n + 1)}$\\
+On a que $|f_n(-x)| = \frac{|(-x)^{2n+1}|}{n(2n + 1)} = \frac{|-x^{2n+1}|}{n(2n + 1)} = \frac{|x^{2n+1}|}{n(2n + 1)} = |f_n(x)|$\\
+Donc $\mysupp{[-R, R]}|f_n(x)| = \mysupp{[0, R]}|f_n(x)| = |f_n(R)|$ car $|f_n|$ est strictement croissant\\
+$\sum_{n \geq 1} \mysupp{[-R, R]}|f_n(x)|$ = $\sum_{n \geq 1} |f_n(R)|$\\
+$\tab[3cm] = \sum_{n \geq 1} |f_n(1)|$\\
+$\tab[3cm] = \sum_{n \geq 1} \frac{1}{n(2n + 1)}$ converge d'après Riemann\\
+Donc $\sum_{n \geq 1} f_n$ converge normalement\\
+Or $f_n(x)$ est $C^0$\\
+Donc $f(x)$ = $\sum_{n=1}^{\infty} f_n(x)$ est continue sur $[-R, R]$\\
+On a que 
+$\sum_{n=1}^{\infty} f_n(x) = \ln(1 + x^2) + 2(arctan(x)) - 2x$ sur $]-1, 1[$\\
+Or on a vu que $f(x)$ était continue sur $[-1, 1]$ donc on a que:\\
+Soit $x_n \in ]-1, 1[$ tq $x_n \mylim{n}{\infty} 1$\\
+$\underset{n \rightarrow \infty}{\lim(f(x_n))} = f(1)$ Par continuité de la limite en 1\\
+Or comme $x_n$ < 1, on a que $f(x_n) = \ln(1 + x_n^2) + 2(\arctan(x_n)) - 2x_n$\\
+Or $\ln, \arctan,$ et $x$ sont continue en 1, donc:\\
+$\ln(1 + x_n^2) + 2(\arctan(x_n)) - 2x_n \mylim{x_n}{1} ln(1 + 1^2) + 2 \arctan(1) - 2 * 1 = ln(2) + \frac{\pi}{2} - 2$\\
+$f(1) = ln(2) + \frac{\pi}{2} - 2$ 
+% $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n(2n + 1)} = f(1) = ln(1 + 1^2) + 2arctan(2) - 2 * 1 = ln(2) + \frac{\pi}{2} - 2$ 
+\end{document}

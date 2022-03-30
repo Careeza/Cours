@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 1}
+
+\begin{enumerate}[label=\alph*)]
+    \item $f_n(x) = x^n$\\
+        Soit $x \in \mathbb{R}$\\
+        Si $x > 1 \Rightarrow x^n \mylim{n}{\infty} \infty$ donc $f_n$ ne converge pas simplement\\
+        Si $x = 1 \Rightarrow x^n = 1 \mylim{n}{\infty} 1$ donc $f_n$ converge simplement\\
+        Si $0 \leq x < 1 \Rightarrow x^n \mylim{n}{\infty} 0$ donc $f_n$ converge simplement\\
+        Si $-1 < x < 0 \Rightarrow x^n \mylim{n}{\infty} 0$ donc $f_n$ converge simplement\\
+        Si $x \leq -1 \Rightarrow x^n$ n'admet pas de limite et donc $f_n$ ne converge pas simplement\\
+        Donc $f_n$ converge simplement si $x \in ]-1, 1]$
+    \item $f_n(x) = \frac{x^n}{n}$\\
+        Soit $x \in \mathbb{R}$\\
+        Si $x > 1 \Rightarrow x^n \mylim{n}{\infty} \infty$ et par croissance comparé on a que $\frac{x^n}{n} \mylim{n}{\infty} \infty$\\
+        Si $x = 1 \Rightarrow x^n = 1 \mylim{n}{\infty} 1$ donc $f_n \mylim{n}{\infty} 0$\\
+        Si $0 \leq x < 1 \Rightarrow x^n \mylim{n}{\infty} 0$ donc $f_n \mylim{n}{\infty} 0$\\
+        Si $-1 < x < 0 \Rightarrow x^n \mylim{n}{\infty} 0$ donc  $f_n \mylim{n}{\infty} 0$\\
+        Si $x = -1 \Rightarrow \frac{x^n}{n} = \frac{(-1)^n}{n} \mylim{n}{\infty} 0$\\
+        Si $x \leq 1 \Rightarrow x^n \mylim{n}{\infty} \pm \infty$ et par croissance comparé on a que $\frac{x^n}{n} \mylim{n}{\infty} \pm \infty$\\
+        Donc $f_n$ converge simplement si $x \in [-1, 1]$
+    \item  $f_n(x) = n^x$\\
+        Soit $x \in \mathbb{R}$\\
+        Si $x > 0 \Rightarrow n^x \mylim{n}{\infty} \infty$, donc $f_n$ ne converge pas simplement\\
+        Si $x = 0 \Rightarrow n^0 = 1 \mylim{n}{\infty} 1$ donc $f_n$ converge simplement\\
+        Si $x < 0$ soit $k = |x|$ on a $n^x = \frac{1}{n^k}$ or $k \geq 0$ donc $n^k \mylim{n}{\infty} \infty \Rightarrow f_n(x) = \frac{1}{n^k} \mylim{n}{\infty} 0$\\
+        Donc $f_n$ converge simplement si $x \in ]-\infty, 0]$
+    \newpage    
+    \item $f_n(x) = x^n e^n = (xe)^n$\\
+    Soit $x \in \mathbb{R}$\\
+    On a vu a la question que $f_n(x) = x^n$ converge simplement si $x \in ]-1, 1]$\\
+    Donc $-1 < ex \leq 1 \Leftrightarrow \frac{-1}{e} < x \leq \frac{1}{e}$\\
+    Donc $f_n$ converge simplement si $x \in ]-\frac{1}{e}, \frac{1}{e}]$
+    \item $f_n(x) = \frac{sin(n^2x)}{n}$\\
+    Soit $x \in \mathbb{R}$\\
+    On a que $\forall x \in \mathbb{R}$ $-1 \leq sin(n^2x) \leq 1$\\
+    Donc $\forall x \in \mathbb{R}$ $\frac{sin(n^2x)}{n} \mylim{n}{\infty} 0$\\
+    Donc $f_n$ converge simplement si $x \in \mathbb{R}$
+    \item $f_n(x) = n sin(\frac{x}{n})$
+    Soit $x \in \mathbb{R}$\\
+    On a $\frac{x}{n} \mylim{n}{\infty} 0$ donc on peut faire un DL de sin en 0\\
+    $sin(\frac{n}{x}) = \frac{x}{n} + o(\frac{1}{n})$\\
+    $f_n(x) = n (\frac{x}{n} + o(\frac{1}{n}) = x + o(1) \mylim{n}{\infty} x$\\
+    Donc $f_n$ converge simplement si $x \in \mathbb{R}$
+    \item $f_n(x) = n^2(cos(\frac{x}{n}) - 1)$
+    Soit $x \in \mathbb{R}$\\
+    On a $\frac{x}{n} \mylim{n}{\infty} 0$ donc on peut faire un DL de cos en 0\\
+    $cos(\frac{n}{x}) = 1 - \frac{x^2}{2n^2} + o(\frac{1}{n^2})$\\
+    $f_n(x) = n^2 (\frac{x^2}{2n^2} + o(\frac{1}{n^2}) = \frac{x^2}{2} + o(1) \mylim{n}{\infty} \frac{x^2}{2}$\\
+    Donc $f_n$ converge simplement si $x \in \mathbb{R}$
+\end{enumerate}
+\newpage
+\begin{enumerate}[label=\alph*)]
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            0 \mbox{ si x} \in ]-1, 1[\\
+            1 \mbox{ si x} = 1\\
+        \end{array}
+    \right.$
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            0 \mbox{ si x} \in [-1, 1]\\
+        \end{array}
+    \right.$
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            0 \mbox{ si x} \in ]-\infty, 0[\\
+            1 \mbox{ si x} = 0\\
+        \end{array}
+    \right.$
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            0 \mbox{ si x} \in ]-\frac{1}{e}, \frac{1}{e}[\\
+            1 \mbox{ si x} = \frac{1}{e}\\
+        \end{array}
+    \right.$
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            0 \mbox{ si x} \in \mathbb{R}\\
+        \end{array}
+    \right.$
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            x \mbox{ si x} \in \mathbb{R}\\
+        \end{array}
+    \right.$
+    \item $f_n(x) \Rightarrow \left\{
+        \begin{array}{ll}
+            \frac{x^2}{2} \mbox{ si x} \in \mathbb{R}\\
+        \end{array}
+    \right.$
+\end{enumerate}
+
+\end{document}

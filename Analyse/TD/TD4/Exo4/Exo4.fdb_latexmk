@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1647547830 "/Users/fredericbecerril/projet/Cours/Analyse/TD/TD4/Exo4/Exo4.tex" "Exo4.pdf" "Exo4" 1647547830
-  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1647390509 81086 6fddea6b023469843de28035c851ec71 ""
+["pdflatex"] 1648115223 "/Users/fredericbecerril/projet/Cours/Analyse/TD/TD4/Exo4/Exo4.tex" "Exo4.pdf" "Exo4" 1648115223
+  "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1647866668 81086 6fddea6b023469843de28035c851ec71 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1647256762 10260652 8a9e2f8cb8067a9c27ba5fa12acbbc8a ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1646147450 1004 54797486969f23fa377b128694d548df ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1646147450 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -48,9 +48,9 @@
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1646147466 4009 187ea2dc3194cd5a76cd99a8d7a6c4d0 ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1646147468 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
   "/Users/fredericbecerril/Library/Application Support/MiKTeX/texmfs/install/tex/latex/setspace/setspace.sty" 1646166360 22913 a27d7908fc6f0385466454a966a316eb ""
-  "/Users/fredericbecerril/projet/Cours/Analyse/TD/TD4/Exo4/Exo4.tex" 1647547830 2425 3864246476fb05493c58250c069b855a ""
-  "Exo4.aux" 1647547830 231 9012b29776d03b2e0e19a2f8cc6077d9 "pdflatex"
-  "Exo4.tex" 1647547830 2425 3864246476fb05493c58250c069b855a ""
+  "/Users/fredericbecerril/projet/Cours/Analyse/TD/TD4/Exo4/Exo4.tex" 1648115223 2587 55d1cf8c8b308ae751d09cec9e326e7d ""
+  "Exo4.aux" 1648115223 231 9012b29776d03b2e0e19a2f8cc6077d9 "pdflatex"
+  "Exo4.tex" 1648115223 2587 55d1cf8c8b308ae751d09cec9e326e7d ""
   (generated)
   "Exo4.aux"
   "Exo4.log"

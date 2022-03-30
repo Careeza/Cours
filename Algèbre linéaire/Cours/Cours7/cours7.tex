@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\newcommand{\scalaire}[2]{\left< #1 | #2\right>}
+\onehalfspacing
+\author{Frederic Becerril}
+
+\begin{document}
+
+\part*{Chapitre 4: Isométries vectorielles}
+
+$(E, <|>)$ espace euclidien de dimension n, $||.||$ norme associée
+
+\section{Isométries (vectorielle)}
+
+\subsection{Définition} Un endomorphisme de E, $f \in \mathcal{L}(E)$ est une isométrie vectorielle ssi\\
+\begin{align*}
+    \forall x \in E, \; ||f(x)|| = ||x||
+\end{align*}
+
+\subsection{\underline{Remarque}} $f$ est un isomorphisme $(\in GL(E))$
+\begin{align*}
+    f : E \rightarrow E
+\end{align*}
+$x \in ker f \tab \underset{0}{\underbrace{||f(x)||}} = ||x||$\\
+$\Leftrightarrow x = 0_E$
+
+\subsection{\underline{Théorème:}} Soit $f \in \mathcal{L}(E)$, Les 4 propositions suivantes sont équivalentes:
+\begin{enumerate}
+    \item $f$ est une isométrie
+    \item $f$ conserve le produit scalaire:\\
+    $\forall(x, y) \in E^2 <f(x)|f(y)> = <x|y>$
+    \item $f$ transforme une BON en une BON
+    \item La matrice représentative de $f$ dans une BON est orthogonal
+\end{enumerate}
+
+\newpage
+
+\subsection{\underline{Preuve:}}
+On va montrer $(1) \Rightarrow (2) \Rightarrow (3) \Rightarrow (4) \Rightarrow (1)$
+\begin{itemize}
+    \item $(1) \Rightarrow (2)$\\
+    $\forall (x, y) \in E^2 \tab <x|y> = \frac{1}{2}(||x+y||^2 - ||x||^2 - ||y||^2)$\\
+    $\forall (x, y) \in E^2 \tab <f(x), f(y)> \; = \frac{1}{2}(||f(x) + f(y)||^2 - ||f(x)||^2 - ||f(y)||^2)$\\
+    $\tab[5.3cm] =\frac{1}{2}(||f(x+y)||^2 - ||f(x)||^2 - ||f(y)||^2)$ (*)\\
+    $\tab[5.3cm] =\frac{1}{2}(||x+y||^2 - ||x||^2 - ||y||^2)$ (**)\\
+    $\tab[5.3cm] = \; <x|y>$
+    \item $(2) \Rightarrow (3)$\\
+    $\{u_1, \dots, u_n\}$ BON de E\\
+    On pose $\forall i \in \{1, \dots, n\}, \; v_i = f(u_i)$\\
+    $||v_i||^2 = <v_i|v_i> = <f(u_i)|f(u_i)> = <u_i|u_i> = 1$\\
+    Si $i \neq j$\\
+    $<v_i | v_j> = <f(u_i)|f(u_j)> = <u_i|u_j> = 0$\\
+    $\{v_1, \dots, v_n\}$ famille orthonormée de $n = dim E$ vecteurs
+    \item $(3) \Rightarrow (4)$\\
+    $\mathcal{B} = \{u_1, \dots, u_n\}$ une BON\\
+    $P = Mat_{\mathcal{B}}f = \begin{pmatrix}
+        f(u_1) & \dots & f(u_n)\\
+        \vdots & & \vdots\\
+    \end{pmatrix}$\\
+    matrice de passage de $\{u_1, \dots, u_n\}$ à $v_1, \dots, v_n$ BON donc la matrice est orthogonale
+    \item $(4) \Rightarrow (1)$\\
+    Si $P = Mat_{\mathcal{B}}f \in O(n)$\\
+    Si $\mathcal{B} = \{u_1, \dots, u_n\}$ est une BON\\
+    $x \in E \rightarrow X = \begin{pmatrix}
+        x_1\\
+        \vdots\\
+        x_n\\
+    \end{pmatrix}$ tq $x = x_1 u_1 + \dots + x_n u_n$\\
+    Si $y = f(x) \rightarrow Y = PX$\\
+    Si BON $||x||^2 = <x|x> = \sum_{i = 1}^n x_i^2 = X^T . X$\\
+    $||f(x)||^2 = ||y||^2 = Y^T \cdot Y = (PX)^T \cdot (PX) = X^T \cdot P^T \cdot P \cdot X = X^T \cdot X = ||x||^2$
+\end{itemize}
+(*) Linéarité de f\\
+(**) Isométrie de f
+
+\newpage
+
+\subsection{\underline{Théorème:}} 
+\begin{itemize}
+    \item  Dans E euclidien, l'ensemble des isométries vectorielles de E est noté O(E) et c'est un sous-groupe de GL(E)
+    \item Si B est une BON de E\\
+    $O(E) \rightarrow O(n)$\\
+    $f \longmapsto Mat_B(f)$
+    Est un isomorphisme de groupe
+\end{itemize}
+
+\subsection{\underline{Propriétés supplémentaire:}} 
+
+\begin{enumerate}
+    \item Si $f \in O(E)$ $det f = \pm 1$, $SO(E) = \{f \in O(E) \mbox{ tq } det f = 1\}$ sous groupe de $O(E)$\\
+    \tab[5cm] $\rightarrow$ isométrie positives ou directe
+    \item Si $det f =-1$\\
+    \tab[1cm] $\rightarrow$ isométrie négative ou indirecte
+    \item Si $f \in O(E)$ et $F \subset E$ est un sev stable par f\\
+    $F^\perp$ est stable par f.\\
+    $f_{|F} F \rightarrow F$ bijective $(f: E \rightarrow E)$ bijective
+    Soit  $z \in F^\perp$ on veut montrer que $f(z) \in F^\perp$\\
+    $\forall x \in F$, $\exists y \in F$ tq $f(y) = x$\\
+    $\scalaire{f(z)}{x} = \scalaire{f(z)}{f(y)} = \scalaire{z}{y} = 0$, $f(z) \in F^\perp$
+    \item Si $f$ a des valeurs propres réelles. Elles peuvent valoir que 1 où $-1$\\
+    Si $\lambda \in \mathbb{R}$ et $x \neq 0$ tq $f(x) = \lambda x$\\
+    $\underset{\|}{||f(x)||} = ||x||$\\
+    $\tab[1.5mm]||\lambda x|| = |\lambda| \; ||x|| \Rightarrow |\lambda| = 1$
+    \item $\ker(f - Id_E)$ et $\ker(f + Id_E)$ sont orthogonaux
+\end{enumerate}
+
+\subsection{\underline{Les symétries orthogonales:}}
+
+$F$ sev de $E$; $E = F \oplus F^\perp$; $P_F$ et $P_{F^\perp}$\\
+$S_F$ = $P_F - P_{F^\perp} = 2P_F - Id_E = Id_E - 2P_{F^\perp}$
+
+\paragraph{\underline{Propriétés:}} $S_F$ est une isométrie vectorielle\\
+$||S_F(x)||^2 = ||P_F(x) - P_{F^\perp}(x)||^2 = ||P_F(x)||^2 + ||P_{F^\perp}(x)||^2$\\
+$\tab[1.6cm] = ||P_F(x) + P_{F^\perp}(x)||^2 = ||x||^2$\\
+Si $S$ est une symétries $\perp$. C'est la symétries $\perp$ par rapport à $F = \ker\{S - Id_E\}$ et $F^\perp = \ker\{S + Id_E\}$\\
+Si $f \in O(E)$ et $\ker\{f - Id_E\} \oplus \ker\{f + Id_E\} = E$ $f$ est la symétrie $\perp$ par rapport à $\ker \{f - Id_E\}$\\
+Si $f$ est une symétrie $\perp$ il existse une $BON$ $\mathcal{B}$ tq\\
+$Mat_{\mathcal{B}}f = \begin{pmatrix}
+    1 & 0 & \dots & \dots & \dots & 0\\
+    0 & \ddots & & & & 0\\
+    \vdots & & 1 & & & \vdots\\
+    \vdots & & & -1 & & \vdots\\
+    \vdots & & & & \ddots & \vdots\\
+    0 & \dots & \dots & \dots & 0 & -1\\
+\end{pmatrix}$ \vspace{3mm}\\
+Voc: Une symétrie par rapport à $F$ hyperplan s'appelle réflexion   
+
+
+
+\end{document}

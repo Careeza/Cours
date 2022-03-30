@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 11}
+
+On dispose d'un lot de 100 pièces de monnaie toutes de même apparence. On sait que 50 de
+ces pièces sont équilibrées tandis que les 50 autres sont truquées. Pour une pièce truquée, la
+probabilité d'apparition de "face" lors d'un jet de cette pièce vaut $\frac{3}{4}$.\\
+On cherche la probabilité d'obtenir face après un lancé d'une pièce au hasard\\
+Soit P(F) la probabilité d'avoir face\\
+Soit P(T) la probabilité que la pièce soit truquée\\
+Soit P(NT) la probabilité que la pièce ne soit pas truquée\\
+$P(F) = P(F \cap T) + P(F \cap NT)$\\
+$\tab[0.9cm] = P(T) * P(F|T) + P(NT) * P(F|NT)$\\
+$\tab[0.9cm] = \frac{1}{2} * \frac{3}{4} + \frac{1}{2} * \frac{1}{2} = \frac{5}{8}$\\
+On cherche $P(T|F)$\\
+$P(T|F) = \frac{P(T \cap F)}{P(F)} = \frac{\frac{1}{2} * \frac{3}{4}}{\frac{5}{8}} = \frac{3}{5}$
+
+
+\end{document}

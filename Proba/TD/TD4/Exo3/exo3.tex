@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\important}[1]{{\color{red}\underline{\textbf{#1}}}}
+\newcommand{\hbrace}[2]{\underset{#1}{\underbrace{#2}}}
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+% \color{red}
+
+\begin{document}
+
+\part*{Exerice 3}
+
+$\Omega = \{0, 1\}^{\mathbb{N}}$\\
+$\omega = (\omega_1, \omega_2, \dots) \in \{0, 1\}^{\mathbb{N}}$\\
+On se munit de la variable aléatoire\\
+$X: \Omega \rightarrow \mathbb{N} \cup \infty$\\
+$\omega \mapsto $
+$\left\{
+    \begin{array}{ll}
+        k \mbox{ si } \{\hbrace{\mbox{ k zeros }}{0, ..., 0,} \; 1\}\\
+        \infty \mbox{ si }\{\hbrace{\infty}{0, ..., 0}\}\\
+    \end{array}
+\right.$\\
+$P(X = k) = (1 - p)^{k - 1}p$\\
+
+
+
+\end{document}

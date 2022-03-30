@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{setspace}
+
+\everymath{\displaystyle}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\doublespacing
+\author{Frederic Becerril}
+
+\newcommand{\mylim}[2]{\underset{#1 \rightarrow #2}{\longrightarrow}}
+\newcommand{\mysim}[2]{\underset{#1 \rightarrow #2}{\sim}}
+% \newcommand{\citer}[2]{\og #2 \fg{} (#1)}
+
+\begin{document}
+
+\part*{Exerice 1}
+
+\section*{Correction 1}
+
+On demande la loi de $1_A \Omega \rightarrow \{0, 1\}$\\
+P(X = 1) = $P(\{\omega \in \Omega, 1_A(w) = 1\}) = P(A)$\\
+et P(X = 0) = $P(\{\omega \in \Omega, 1_A(w) = 0\}) = P(A^c) = 1 - P(A)$\\
+X a une loi de Bernouilli de paramètre P(A)
+
+\section*{Correction 2}
+
+($\Omega, P$) espace de proba finie.\\
+$1_A$ : $\Omega \rightarrow \fbox{\{0, 1\}}$||s'appelle v.a de Bernouilli\\
+$\tab[0.8cm] w \mapsto 1_A(w) = \left\{
+    \begin{array}{ll}
+        0 \mbox{ si } w \notin A\\
+        1 \mbox{ si } w \in A\\
+    \end{array}
+\right.$\\
+Soi: fonction de masse : $P(1_A = s)$, $\forall s \in \{0, 1\}$\\
+$P(1_A = 1) = P(\{w: 1_A(w) = 1\}) = P(A)$\\
+$P(1_A = 0) = P(\{w: 1_A(w) = 0\})$\\
+$\tab[1.7cm] = P(\{w:w\notin A\}) = P(A^c) = 1 - P(A)$\\
+On a donc que X = $1_A$ suit une loi de Bernouilli de paramètre $P(A)$
+
+
+\end{document}
